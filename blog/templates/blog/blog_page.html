@@ -5,7 +5,6 @@
 {% block body_class %}template-blogpage{% endblock %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
     <p class="meta">{{ page.date }}</p>
 
     {% with categories=page.categories.all %}
@@ -24,7 +23,18 @@
 
     <div class="intro">{{ page.intro }}</div>
 
-    {{ page.body|richtext }}
+    <article>
+        <h1>{{ page.title }}</h1>
+        {% for block in page.body %}
+            {% if block.block_type == 'heading' %}
+                <h2>{{ block.value }}</h2>
+            {% else %}
+                <section class="block-{{ block.block_type }}">
+                    {% include_block block %}
+                </section>
+            {% endif %}
+        {% endfor %}
+    </article>
 
     {% for item in page.gallery_images.all %}
         <div style="float:left;margin:10px">
