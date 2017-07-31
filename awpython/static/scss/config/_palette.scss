@@ -1,0 +1,97 @@
+/*doc
+---
+title: Palette
+name: palette
+category: base
+---
+
+<h2>Base colours</h2>
+<div class="group">
+<div class="swatch swatch--pbase swatch-colour--light">Primary base<br />#231f20</div>
+<div class="swatch swatch--pbg">Primary background<br />#f5f5f3</div>
+<div class="swatch swatch--pneutral swatch-colour--light">Primary neutral<br />#474646</div>
+</div>
+
+<h2>Highlight colours</h2>
+<div class="group">
+<div class="swatch swatch--phighlight swatch-colour--light">Primary highlight<br />#942571</div>
+<div class="swatch swatch--shighlight">Secondary highlight<br />#e6e048</div>
+<div class="swatch swatch--shighlight2">Secondary highlight 2<br />#00c3a9</div>
+<div class="swatch swatch--shighlight3 swatch-colour--light">Secondary highlight 3<br />#008798</div>
+</div>
+
+<h2>Lowlight colours</h2>
+<div class="group">
+<div class="swatch swatch--slowlight">Secondary lowlight<br />#b2edd0</div>
+</div>
+
+*/
+
+$print-black: #231f20;
+$cream: #f5f5f3;
+
+$dark-grey: #474646;
+$grey: #8f9094;
+$rich-pink: #942571;
+
+$yellow: #e6e048;
+$light-green: #b2edd0;
+$bubblegum: #00c3a9;
+$blue: #008798;
+$lime: #c7cf74;
+$green: #a1ac32;
+$dark-green: #99a702;
+
+
+$colour-primary-bg: $cream;
+$colour-primary-base: $print-black;
+$colour-primary-neutral: $dark-grey;
+$colour-primary-highlight: $rich-pink;
+
+$colour-secondary-highlight: $yellow;
+$colour-secondary-highlight2: $bubblegum;
+$colour-secondary-highlight3: $blue;
+
+$colour-secondary-lowlight: $light-green;
+
+$colour-font-body: $dark-grey;
+$colour-font-alt: $cream;
+
+
+
+/* ==== Must be edited! === */
+
+/* Colours */
+
+$color-primary: $lime;
+$color-secondary: $rich-pink;
+
+$color-neutral: #fff;
+$color-base: #231f20;
+
+
+/* Brand */
+
+$brand-strap-color: $color-neutral;
+$brand-strap-color-alt: $color-primary;
+
+
+/* Backgrounds */
+$background-primary: $color-neutral;
+$background-secondary: $color-secondary;
+
+
+/* Links */
+$link-primary: $color-neutral;
+$link-active: $color-neutral;
+
+
+/* Fonts */
+$font-body-color: $color-base;
+$font-body-color-alt: $color-neutral;
+
+
+/* Borders */
+$border-primary-color: $color-primary;
+
+$border-primary: 1px solid $color-primary;

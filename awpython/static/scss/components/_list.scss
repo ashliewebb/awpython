@@ -1,0 +1,43 @@
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+
+    &--disc {
+        list-style-type: circle;
+        padding-left: 15px;
+
+        li {
+            margin-bottom: em(6px);
+        }
+    }
+
+    &--arrow {
+        li {
+            line-height: 1.65;
+
+            a {
+                @extend .primary-link;
+                @extend .primary-link--underline;
+
+                display: block;
+                margin-left: em(35px);
+            }
+
+            span {
+                &:before {
+                    content: '\2192';
+                    display: inline-block;
+                    float: left;
+                    margin-right: 15px;
+                }
+
+                &:hover,
+                &:active {
+                    color: $green;
+                    @include transition ($base-transition);
+                }
+            }
+        }
+    }
+}

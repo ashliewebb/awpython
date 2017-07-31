@@ -1,0 +1,26 @@
+.main {
+    @include outer-container;
+    @include fill-parent;
+    //max-width: 580px;
+    padding: 2em;
+
+    @include media(get-layout(large)) {
+        padding: 45px 36px 0 72px;
+    }
+
+    .home & {
+        //width: 60%;
+
+        //@include media(get-layout(medium)) {
+        //    margin: 0 auto;
+        //    padding: 4em 0;
+        //}
+        //
+        //@include media(get-layout(large)) {
+        //    margin: 0;
+        //    padding-left: 0;
+        //    width: 400px;
+        //
+        //}
+    }
+}

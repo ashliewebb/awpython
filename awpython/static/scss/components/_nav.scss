@@ -1,0 +1,48 @@
+.nav-primary,
+.nav-footer {
+    margin: 0;
+    text-align: center;
+
+    @include media(get-layout(medium)) {
+        display: inline-block;
+        float: right;
+    }
+
+    ul {
+        @include transition($base-transition);
+        display: inline-block;
+        line-height: 35px;
+        margin: 0 auto;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            float: left;
+            margin: 0 0.25em;
+
+            a {
+                @extend .primary-link;
+                font: 14px $font-primary-nav;
+                letter-spacing: 1px;
+                padding: 5px 8px;
+                text-transform: lowercase;
+            }
+        }
+    }
+}
+
+.nav-primary {
+    margin-top: 35px;
+
+    li {
+        @include media($breakpoint-medium-below) {
+            width: 45%;
+        }
+    }
+}
+
+.nav-footer {
+    @include media($breakpoint-medium-below) {
+        clear: both;
+    }
+}

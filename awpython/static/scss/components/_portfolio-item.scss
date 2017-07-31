@@ -1,0 +1,15 @@
+.portfolio-item {
+    &__name {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    &__desc {
+        padding-left: 35px;
+    }
+
+    a {
+        @extend .primary-link;
+        @extend .primary-link--underline;
+    }
+}

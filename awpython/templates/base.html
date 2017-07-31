@@ -1,12 +1,14 @@
 {% load static wagtailuserbar %}
+{% load static %}
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
             {% block title %}
@@ -22,17 +24,103 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/awpython.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+        <link rel="shortcut icon" href="" /> <!-- favicon.png -->
+        <link rel="canonical" href=""> <!-- base url or page url -->
 
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
+        <noscript id="deferred-styles">
+          <link rel="stylesheet" href="{% static 'css/print.min.css' %}" media="print" />
+          <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css" />
+          <link href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700" rel="stylesheet" type="text/css" />
+        </noscript>
+        <script>
+          var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement);
+            addStylesNode.parentElement.removeChild(addStylesNode);
+          };
+          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+          if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+          else window.addEventListener('load', loadDeferredStyles);
+        </script>
+        <!-- Hotjar Tracking Code for http://www.ashliewebb.com -->
+        <script>
+          (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:260870,hjsv:5};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+          })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body itemscope itemtype="http://schema.org/WebPage" class="{% block body_class %}{% endblock %}">
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KRGW7G"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KRGW7G');</script>
+<!-- End Google Tag Manager -->
+
+    <div class="container">
+        <header class="header" content="header">
+          <div class="inner">
+            <div class="logo">
+              <a href="/" title="Ashlie Webb, UX designer and front end developer">
+                <object data="{% static "images/svg/logo.svg" %}" type="image/svg+xml" class="logo-svg"></object>
+              </a>
+            </div>
+            <nav class="nav-primary" role="navigation">
+              <ul>
+                <li class="first"><a href="/portfolio.html" title="Portfolio">Portfolio</a></li>
+                <li><a href="/about.html" title="About">About</a></li>
+                <li><a href="/blog" title="Read blog">Blog</a></li>
+                <li class="last"><a href="/contact.html" title="Contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <main class="main layout-two-columns--9-shift" id="main" role="main">
+            <section class="content column-9">
+                {% block content %}{% endblock %}
+            </section>
+        </main>
+
+        <footer id="footer" class="footer" role="contentinfo">
+          <div class="inner">
+            <em>&copy; Ashlie Webb 2016</em>
+            <!--<em><a href="{{ site.baseurl }}sitemap.html">Sitemap</a></em>-->
+            <!--<em><a href="{{ site.baseurl }}privacy.html" id="link__footer&#45;&#45;privacy">Privacy</a></em>-->
+            <!--<em><a href="{{ site.baseurl }}style-guide/">Style guide</a></em> -->
+            <em><a href="/resume.html">Resum&eacute;</a></em>
+            <nav class="nav-footer">
+              <ul>
+                <li>{% include "icons/twitter.html" %}</li>
+                <li>{% include "icons/linkedin.html" %}</li>
+                <li>{% include "icons/github.html" %}</li>
+                <li>{% include "icons/instagram.html" %}</li>
+              </ul>
+            </nav>
+          </div>
+        </footer>
+  </div>
+
+
+
+
         {% wagtailuserbar %}
 
-        {% block content %}{% endblock %}
+
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/awpython.js' %}"></script>

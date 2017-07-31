@@ -1,0 +1,59 @@
+.icon {
+    float: left;
+    text-indent: -999em;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        background-size: contain;
+        float: left;
+    }
+
+    &--modifier {
+        &:before {
+            background-image: url('images/icons/icon.svg');
+        }
+    }
+}
+
+.icon-svg {
+    height: 18px;
+    width: 18px;
+    @include transition($base-transition);
+}
+
+#icon-instagram {
+    fill: $print-black;
+
+    &:hover,
+    &:active {
+        fill: #3f729b;
+    }
+}
+
+#icon-twitter {
+    fill: $print-black;
+
+    &:hover,
+    &:active {
+        fill: #55acee;
+    }
+}
+
+#icon-github {
+    fill: $print-black;
+
+    &:hover,
+    &:active {
+        fill: #333;
+    }
+}
+
+#icon-linkedin {
+    fill: $print-black;
+
+    &:hover,
+    &:active {
+        fill: #0976b4;
+    }
+}

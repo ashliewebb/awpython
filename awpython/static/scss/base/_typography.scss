@@ -1,0 +1,82 @@
+/*doc
+---
+title: Typography
+name: typography
+category: base
+---
+
+```html_example
+
+<h1>Heading one, Griffos, 52px</h1>
+<h2>Heading two, Courier New, 17px</h2>
+
+<p>Paragraph, Karla, 16px.</p>
+<p>If you will not be turned, you will be destroyed. Young fool...only now, at the end, do you understand. Your feeble skills are no match for the power of the dark side. You have paid the price for your lack of vision. Father, please. Help me. Now, young Skywalker...you will die.</p>
+```
+*/
+
+
+h1 {
+    color: $color-primary;
+    font-family: $griffos;
+    font-size: em(52px);
+    line-height: 1;
+    margin: 0;
+    text-transform: lowercase;
+
+    .home & {
+        margin: 0;
+        max-width: 300px;
+
+        @include media(get-layout(large)) {
+            font-size: em(60px);
+        }
+
+        br {
+            line-height: 1.35;
+        }
+    }
+}
+
+h2 {
+    clear: both;
+    display: inline-block;
+    font-family: $courier-new;
+    @include font-size(17);
+    letter-spacing: 2px;
+    margin: $base-spacing-unit 0;
+    text-transform: uppercase;
+
+    + h3 {
+        margin-top: 0;
+    }
+}
+
+h3 {
+    font-family: $karla;
+    @include font-size(18);
+    font-weight: 700;
+    margin: em(22px) 0 em(8px);
+}
+
+p,
+%body-type-primary {
+    font-family: $base-font;
+    font-weight: 400;
+    line-height: $base-line-height;
+}
+
+p {
+    color: $color-base;
+    margin-top: 0;
+
+    a {
+        @extend .primary-link;
+        @extend .primary-link--underline;
+    }
+}
+
+ul,
+ol {
+    line-height: $base-line-height;
+}

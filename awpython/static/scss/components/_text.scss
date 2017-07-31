@@ -1,0 +1,17 @@
+.text {
+  &--smaller {
+    font-size: 80%;
+  }
+
+  &--small {
+    font-size: 90%;
+  }
+
+  &--large {
+    font-size: 110%;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}

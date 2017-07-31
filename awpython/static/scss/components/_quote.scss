@@ -1,0 +1,42 @@
+.quote {
+  margin: ($base-spacing-unit * 1.5) 0;
+  padding: 0 ($base-spacing-unit * 2);
+
+  blockquote {
+    @include font-size(18);
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin: 0;
+    padding: $base-spacing-unit ($base-spacing-unit / 2) ($base-spacing-unit / 2) 0;
+    position: relative;
+    text-align: justify;
+
+    &:before,
+    &:after {
+      font-family: $griffos;
+      font-size: 600%;
+      line-height: 0;
+      opacity: 0.15;
+      position: absolute;
+    }
+
+    &:before {
+      content: open-quote;
+      left: -63px;
+      top: 79px;
+    }
+
+    &:after {
+      content: close-quote;
+      bottom: 27px;
+      right: -49px;
+    }
+  }
+
+  cite {
+    display: inline-block;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+// Typography
+
+$karla: 'Karla', Arial, sans-serif;
+$courier: 'CourierPrime', 'Courier New', Times, serif;
+$courier-new: 'Courier New', Courier, Times, serif;
+$griffos: 'GriffosFont';
+$yanone: 'Yanone Kaffeesatz', sans-serif;
+$josefin-slab: 'Josefin Slab', serif;
+$open-sans: 'Open Sans', sans-serif;
+
+$font-primary-nav: $courier;
+
+
+$base-font-size: 16;
+
+$base-spacing-unit: 30px;
+$minor-spacing-unit: $base-spacing-unit / 5;
+
+$base-line-height: 1.65;
+
+$brand-font: Arial, sans-serif;
+$base-font: $karla;
+
+$base-transition: all 0.5s ease;

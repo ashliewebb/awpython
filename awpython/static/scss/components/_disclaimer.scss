@@ -1,0 +1,9 @@
+.disclaimer {
+  display: block;
+  font-style: italic;
+  padding: $minor-spacing-unit;
+
+  &--pre {
+    margin-top: $base-spacing-unit;
+  }
+}

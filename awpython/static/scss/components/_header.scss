@@ -1,0 +1,8 @@
+.header {
+    @include clearfix;
+    @include outer-container;
+
+    @include media(print) {
+        display: none;
+    }
+}
