@@ -18,7 +18,7 @@
             {% endwith %}
 
             <p>{{ post.intro }}</p>
-            {{ post.body|richtext }}
+            {% include_block post.body %}
         {% endwith %}
     {% endfor %}
 
