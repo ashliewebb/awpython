@@ -8,7 +8,7 @@
         padding-left: 15px;
 
         li {
-            margin-bottom: em(6px);
+            margin-bottom: 6px;
         }
     }
 
@@ -21,7 +21,7 @@
                 @extend .primary-link--underline;
 
                 display: block;
-                margin-left: em(35px);
+                margin-left: 35px;
             }
 
             span {
@@ -35,7 +35,7 @@
                 &:hover,
                 &:active {
                     color: $green;
-                    @include transition ($base-transition);
+                    transition: $base-transition;
                 }
             }
         }

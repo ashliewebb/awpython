@@ -3,6 +3,7 @@
 /* global module, require */
 
 var gulp = require('gulp'),
+    path = require('path'),
     mqRemove = require('gulp-mq-remove'),
     $ = require('gulp-load-plugins')({
         pattern: ['gulp-*']
@@ -120,27 +121,31 @@ gulp.task('print', function () {
 // });
 
 gulp.task('svg', function () {
-    return gulp.src('./images/svg/src/*.svg')
-        .pipe($.svgmin({
-            plugins: [{
-                removeDoctype: false
-            },
-            {
-                removeComments: true
-            },
-            {
-                cleanupNumericValues: {
-                    floatPrecision: 2
-                }
-            },
-            {
-                convertColors: {
-                    names2hex: false,
-                    rgb2hex: false
-                }
-            }]
+    var svgs = gulp.src('./images/svg/src/*.svg')
+        .pipe($.svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                },
+                {
+                    removeStyleElement: true
+                }]
+            }
         }))
-        .pipe(gulp.dest('../assets/images/svg/'));
+        .pipe($.svgstore({ inlineSvg: true }));
+
+    function fileContents (filePath, file) {
+        return file.contents.toString();
+    }
+
+    return gulp.src('../templates/inline_svg.txt')
+        .pipe($.rename('inline_svg.html'))
+        .pipe($.inject(svgs, { transform: fileContents }))
+        .pipe(gulp.dest('../templates'));
 });
 
 gulp.task('watch', function () {

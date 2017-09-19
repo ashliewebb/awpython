@@ -1,11 +1,7 @@
 {% load static wagtailuserbar %}
-{% load static %}
 
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js"> <!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -28,24 +24,9 @@
         <link rel="shortcut icon" href="" /> <!-- favicon.png -->
         <link rel="canonical" href=""> <!-- base url or page url -->
 
-        <noscript id="deferred-styles">
-          <link rel="stylesheet" href="{% static 'css/print.min.css' %}" media="print" />
-          <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css" />
-          <link href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700" rel="stylesheet" type="text/css" />
-        </noscript>
-        <script>
-          var loadDeferredStyles = function() {
-            var addStylesNode = document.getElementById("deferred-styles");
-            var replacement = document.createElement("div");
-            replacement.innerHTML = addStylesNode.textContent;
-            document.body.appendChild(replacement);
-            addStylesNode.parentElement.removeChild(addStylesNode);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-                  webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-          else window.addEventListener('load', loadDeferredStyles);
-        </script>
+        <!--<link rel="stylesheet" href="{% static 'css/print.min.css' %}" media="print" />-->
+        <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css" />
+
         <!-- Hotjar Tracking Code for http://www.ashliewebb.com -->
         <script>
           (function(h,o,t,j,a,r){
@@ -71,20 +52,22 @@
 })(window,document,'script','dataLayer','GTM-KRGW7G');</script>
 <!-- End Google Tag Manager -->
 
+{% include "inline_svg.html" %}
+
     <div class="container">
         <header class="header" content="header">
           <div class="inner">
             <div class="logo">
               <a href="/" title="Ashlie Webb, UX designer and front end developer">
-                <object data="{% static "images/svg/logo.svg" %}" type="image/svg+xml" class="logo-svg"></object>
+                <svg class="svg-icon"><use xlink:href="#logo"></use></svg>
               </a>
             </div>
             <nav class="nav-primary" role="navigation">
               <ul>
-                <li class="first"><a href="/portfolio.html" title="Portfolio">Portfolio</a></li>
-                <li><a href="/about.html" title="About">About</a></li>
+                <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
+                <li><a href="/about" title="About">About</a></li>
                 <li><a href="/blog" title="Read blog">Blog</a></li>
-                <li class="last"><a href="/contact.html" title="Contact">Contact</a></li>
+                <li class="last"><a href="/contact" title="Contact">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -105,22 +88,33 @@
             <em><a href="/resume.html">Resum&eacute;</a></em>
             <nav class="nav-footer">
               <ul>
-                <li>{% include "icons/twitter.html" %}</li>
-                <li>{% include "icons/linkedin.html" %}</li>
-                <li>{% include "icons/github.html" %}</li>
-                <li>{% include "icons/instagram.html" %}</li>
+                <li>
+                    <a href="https://twitter.com/ashlie012">
+                        <svg class="icon-svg icon-svg--twitter"><use xlink:href="#twitter"></use></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ashliewebb/">
+                        <svg class="icon-svg icon-svg--linkedin"><use xlink:href="#linkedin"></use></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/ashliewebb">
+                        <svg class="icon-svg icon-svg--github"><use xlink:href="#github"></use></svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://instagram.com/ashliewebb">
+                        <svg class="icon-svg icon-svg--instagram"><use xlink:href="#instagram"></use></svg>
+                    </a>
+                </li>
               </ul>
             </nav>
           </div>
         </footer>
   </div>
 
-
-
-
         {% wagtailuserbar %}
-
-
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/awpython.js' %}"></script>

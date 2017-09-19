@@ -3,15 +3,25 @@ from __future__ import absolute_import, unicode_literals
 from django.db import models
 
 from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.fields import RichTextField
-from wagtail.wagtailadmin.edit_handlers import FieldPanel
+from wagtail.wagtailcore.fields import StreamField
+from wagtail.wagtailcore import blocks
+from wagtail.wagtailcore.blocks import BlockQuoteBlock
+from wagtail.wagtailadmin.edit_handlers import StreamFieldPanel
+
+
+class QuoteBlock(blocks.StructBlock):
+    quote = BlockQuoteBlock(required=True, max_length=225)
+    quotee = blocks.CharBlock(classname='quotee')
+
+    class Meta:
+        template = 'blocks/quote.html'
 
 
 class HomePage(Page):
-    intro = RichTextField(blank=True)
-    body = RichTextField(blank=True)
+    body = StreamField([
+        ('quote', QuoteBlock())
+    ])
 
     content_panels = Page.content_panels + [
-        FieldPanel('intro'),
-        FieldPanel('body', classname='full')
+        StreamFieldPanel('body')
     ]

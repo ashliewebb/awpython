@@ -2,7 +2,7 @@
     color: $color-base;
     padding-bottom: 2px;
     text-decoration: none;
-    @include transition ($base-transition);
+    transition: $base-transition;
 
     &:hover,
     &:active {

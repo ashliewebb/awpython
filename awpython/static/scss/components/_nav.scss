@@ -9,7 +9,7 @@
     }
 
     ul {
-        @include transition($base-transition);
+        transition: $base-transition;
         display: inline-block;
         line-height: 35px;
         margin: 0 auto;
@@ -44,5 +44,9 @@
 .nav-footer {
     @include media($breakpoint-medium-below) {
         clear: both;
+    }
+
+    ul li a {
+        padding: 0;
     }
 }

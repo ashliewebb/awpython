@@ -2,7 +2,7 @@
     height: 133px;
     margin: 0 auto;
     padding: 10px 0 0;
-    @include transition($base-transition);
+    transition: $base-transition;
     width: 245px;
 
     @include media(get-layout(medium)) {
@@ -12,13 +12,13 @@
         padding-right: 1em;
     }
 
+    .svg-icon {
+        height: 120px;
+        width: 220px;
+    }
+
     a {
         display: inline-block;
         width: 100%;
     }
-}
-
-.logo-svg {
-    width: 100%;
-    height: auto;
 }
