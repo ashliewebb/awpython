@@ -1,3 +1,7 @@
 .idea/
-awpython/static/css/style.min.css
 awpython/static/node_modules/
+
+venv
+*.pyc
+staticfiles
+.env
