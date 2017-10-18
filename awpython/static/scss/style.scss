@@ -16,7 +16,6 @@
 
 "objects/ui-list",
 
-"layout/container",
 "layout/content",
 "layout/grid",
 "layout/main",
@@ -32,6 +31,13 @@
 "components/logo",
 "components/nav",
 "components/portfolio-item",
-"components/quote",
 "components/teaser",
-"components/text";
+"components/text",
+
+
+// Redesign 2017
+
+// Aim to remove bourbon and neat
+
+"components/quote",
+"components/intro";

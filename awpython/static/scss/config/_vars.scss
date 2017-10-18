@@ -10,15 +10,11 @@ $open-sans: 'Open Sans', sans-serif;
 
 $font-primary-nav: $courier;
 
+$base-font: $yanone;
 
-$base-font-size: 16;
-
-$base-spacing-unit: 30px;
-$minor-spacing-unit: $base-spacing-unit / 5;
-
+$base-font-size: 16px;
 $base-line-height: 1.65;
-
-$brand-font: Arial, sans-serif;
-$base-font: $karla;
-
 $base-transition: all 0.5s ease;
+
+$base-spacing-unit: 22px;
+$minor-spacing-unit: 5px;

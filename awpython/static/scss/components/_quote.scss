@@ -1,42 +1,46 @@
-.quote {
-  margin: ($base-spacing-unit * 1.5) 0;
-  padding: 0 ($base-spacing-unit * 2);
+.block-quote {
+  margin: ($base-spacing-unit * 1.5) 0 0;
+  padding: 0 $base-spacing-unit;
+  text-align: center;
 
-  blockquote {
-    @include font-size(18);
-    letter-spacing: 1px;
+  &__quote {
+    @include font-size(24);
     line-height: 1.4;
-    margin: 0;
-    padding: $base-spacing-unit ($base-spacing-unit / 2) ($base-spacing-unit / 2) 0;
-    position: relative;
-    text-align: justify;
+    margin: 0 0 ($base-spacing-unit / 3) 0;
 
-    &:before,
-    &:after {
-      font-family: $griffos;
-      font-size: 600%;
-      line-height: 0;
-      opacity: 0.15;
-      position: absolute;
-    }
+    //&:before,
+    //&:after {
+    //  font-family: $griffos;
+    //  font-size: 600%;
+    //  line-height: 0;
+    //  opacity: 0.15;
+    //  position: absolute;
+    //}
 
-    &:before {
-      content: open-quote;
-      left: -63px;
-      top: 79px;
-    }
+    //&:before {
+    //  content: open-quote;
+    //  left: -63px;
+    //  top: 79px;
+    //}
 
-    &:after {
-      content: close-quote;
-      bottom: 27px;
-      right: -49px;
-    }
+    //&:after {
+    //  content: close-quote;
+    //  bottom: 27px;
+    //  right: -49px;
+    //}
   }
 
-  cite {
+  &__cite {
+    @include font-size(14);
     display: inline-block;
-    font-style: italic;
-    text-align: center;
+    font-style: normal;
+    opacity: 0.65;
     width: 100%;
+
+    &:before {
+      content: '~';
+      display: inline-block;
+      margin-right: 5px;
+    }
   }
 }

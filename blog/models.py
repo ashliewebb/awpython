@@ -19,6 +19,7 @@ from wagtail.wagtailsnippets.models import register_snippet
 
 
 class BlogIndexPage(Page):
+    subtitle = models.CharField(max_length=255, default='')
     intro = RichTextField(blank=True)
 
     def get_context(self, request):
@@ -29,6 +30,7 @@ class BlogIndexPage(Page):
         return context
 
     content_panels = Page.content_panels + [
+        FieldPanel('subtitle'),
         FieldPanel('intro', classname='full')
     ]
 

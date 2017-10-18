@@ -54,73 +54,69 @@
 
 {% include "inline_svg.html" %}
 
-    <div class="container">
-        <header class="header" content="header">
-          <div class="inner">
-            <div class="logo">
-              <a href="/" title="Ashlie Webb, UX designer and front end developer">
-                <svg class="svg-icon"><use xlink:href="#logo"></use></svg>
-              </a>
-            </div>
-            <nav class="nav-primary" role="navigation">
-              <ul>
-                <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
-                <li><a href="/about" title="About">About</a></li>
-                <li><a href="/blog" title="Read blog">Blog</a></li>
-                <li class="last"><a href="/contact" title="Contact">Contact</a></li>
-              </ul>
-            </nav>
+      <header class="header" content="header">
+        <div class="inner">
+          <div class="logo">
+            <a href="/" title="Ashlie Webb, UX designer and front end developer">
+              <svg class="svg-icon"><use xlink:href="#logo"></use></svg>
+            </a>
           </div>
-        </header>
+          <nav class="nav-primary" role="navigation">
+            <ul>
+              <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
+              <li><a href="/about" title="About">About</a></li>
+              <li><a href="/blog" title="Read blog">Blog</a></li>
+              <li class="last"><a href="/contact" title="Contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-        <main class="main layout-two-columns--9-shift" id="main" role="main">
-            <section class="content column-9">
-                {% block content %}{% endblock %}
-            </section>
-        </main>
+      <main class="main-container" role="main">
+          {% block content %}{% endblock %}
+      </main>
 
-        <footer id="footer" class="footer" role="contentinfo">
-          <div class="inner">
-            <em>&copy; Ashlie Webb 2016</em>
-            <!--<em><a href="{{ site.baseurl }}sitemap.html">Sitemap</a></em>-->
-            <!--<em><a href="{{ site.baseurl }}privacy.html" id="link__footer&#45;&#45;privacy">Privacy</a></em>-->
-            <!--<em><a href="{{ site.baseurl }}style-guide/">Style guide</a></em> -->
-            <em><a href="/resume.html">Resum&eacute;</a></em>
-            <nav class="nav-footer">
-              <ul>
-                <li>
-                    <a href="https://twitter.com/ashlie012">
-                        <svg class="icon-svg icon-svg--twitter"><use xlink:href="#twitter"></use></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/ashliewebb/">
-                        <svg class="icon-svg icon-svg--linkedin"><use xlink:href="#linkedin"></use></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/ashliewebb">
-                        <svg class="icon-svg icon-svg--github"><use xlink:href="#github"></use></svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://instagram.com/ashliewebb">
-                        <svg class="icon-svg icon-svg--instagram"><use xlink:href="#instagram"></use></svg>
-                    </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </footer>
-  </div>
+      <footer id="footer" class="footer" role="contentinfo">
+        <div class="inner">
+          <em>&copy; Ashlie Webb 2016</em>
+          <!--<em><a href="{{ site.baseurl }}sitemap.html">Sitemap</a></em>-->
+          <!--<em><a href="{{ site.baseurl }}privacy.html" id="link__footer&#45;&#45;privacy">Privacy</a></em>-->
+          <!--<em><a href="{{ site.baseurl }}style-guide/">Style guide</a></em> -->
+          <em><a href="/resume.html">Resum&eacute;</a></em>
+          <nav class="nav-footer">
+            <ul>
+              <li>
+                  <a href="https://twitter.com/ashlie012">
+                      <svg class="icon-svg icon-svg--twitter"><use xlink:href="#twitter"></use></svg>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://www.linkedin.com/in/ashliewebb/">
+                      <svg class="icon-svg icon-svg--linkedin"><use xlink:href="#linkedin"></use></svg>
+                  </a>
+              </li>
+              <li>
+                  <a href="https://github.com/ashliewebb">
+                      <svg class="icon-svg icon-svg--github"><use xlink:href="#github"></use></svg>
+                  </a>
+              </li>
+              <li>
+                  <a href="http://instagram.com/ashliewebb">
+                      <svg class="icon-svg icon-svg--instagram"><use xlink:href="#instagram"></use></svg>
+                  </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
 
-        {% wagtailuserbar %}
+      {% wagtailuserbar %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/awpython.js' %}"></script>
+      {# Global javascript #}
+      <script type="text/javascript" src="{% static 'js/awpython.js' %}"></script>
 
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-        {% endblock %}
+      {% block extra_js %}
+          {# Override this in templates to add extra javascript #}
+      {% endblock %}
     </body>
 </html>

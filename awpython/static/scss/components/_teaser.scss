@@ -1,7 +1,8 @@
 .teaser {
-  margin: ($base-spacing-unit / 2) 0 $base-spacing-unit ;
+  margin: ($base-spacing-unit / 2) 0 $base-spacing-unit;
+
   &__link {
-    color: $font-body-color;
+    color: $body-text-color;
     text-decoration: none;
 
     &:hover,

@@ -1,0 +1,18 @@
+.intro {
+  @include font-size(19);
+  margin-top: $base-spacing-unit;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  &:after {
+    background-color: $color-primary;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: ($base-spacing-unit * 2.5) auto 0;
+    width: 160px;
+  }
+}

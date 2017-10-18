@@ -18,10 +18,15 @@ class QuoteBlock(blocks.StructBlock):
 
 
 class HomePage(Page):
-    body = StreamField([
+    intro = StreamField([
         ('quote', QuoteBlock())
     ])
 
+    # body = StreamField([
+    #     ('quote', QuoteBlock())
+    # ])
+
     content_panels = Page.content_panels + [
-        StreamFieldPanel('body')
+        StreamFieldPanel('intro')
+        # StreamFieldPanel('body')
     ]
