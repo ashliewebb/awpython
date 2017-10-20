@@ -6,11 +6,11 @@
 
 {% block content %}
 
-    <article>
-        <h1>{{ page.title }}</h1>
-        <h2>{{ page.intro }}</h2>
+    <p class="breadcrumbs"><a href="{{ page.get_parent.url }}">Blog</a> > {{ page.title }}</p>
 
-        <p><em>By {{ page.author }}. {{ page.date }}.</em></p>
+    <article>
+        <h1 class="article__heading">{{ page.title }}</h1>
+        <h2>{{ page.intro }}</h2>
 
         {% for block in page.body %}
             {% if block.block_type == 'heading' %}
@@ -21,6 +21,8 @@
                 </section>
             {% endif %}
         {% endfor %}
+
+        <p><em>By {{ page.author }}. {{ page.date }}.</em></p>
     </article>
 
     {% for item in page.gallery_images.all %}

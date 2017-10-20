@@ -1,0 +1,6 @@
+.article {
+    &__heading {
+        @include font-size(36);
+        text-transform: none;
+    }
+}

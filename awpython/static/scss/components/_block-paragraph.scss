@@ -1,5 +1,9 @@
 .block-paragraph {
     p {
         @include font-size(18);
+
+        article & {
+            @include font-size(19);
+        }
     }
 }
