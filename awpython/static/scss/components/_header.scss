@@ -1,4 +1,7 @@
 .header {
+    display: inline-block;
+    width: 100%;
+
     @include media(print) {
         display: none;
     }

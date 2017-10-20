@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 
 {% load wagtailcore_tags wagtailimages_tags %}
 
@@ -18,7 +18,6 @@
             {% endwith %}
 
             <p>{{ post.intro }}</p>
-            {% include_block post.body %}
         {% endwith %}
     {% endfor %}
 

@@ -1,0 +1,5 @@
+.block-paragraph {
+    p {
+        @include font-size(18);
+    }
+}

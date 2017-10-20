@@ -5,26 +5,13 @@
 {% block body_class %}template-blogpage{% endblock %}
 
 {% block content %}
-    <p class="meta">{{ page.date }}</p>
-
-    {% with categories=page.categories.all %}
-        {% if categories %}
-            <h3>Posted in:</h3>
-            <ul>
-                {% for category in categories %}
-                    <li style="display: inline">
-                        {% image category.icon fill-32x32 style="vertical-align: middle" %}
-                        {{ category.name }}
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-
-    <div class="intro">{{ page.intro }}</div>
 
     <article>
         <h1>{{ page.title }}</h1>
+        <h2>{{ page.intro }}</h2>
+
+        <p><em>By {{ page.author }}. {{ page.date }}.</em></p>
+
         {% for block in page.body %}
             {% if block.block_type == 'heading' %}
                 <h2>{{ block.value }}</h2>
@@ -51,6 +38,20 @@
             {% endfor %}
         </div>
     {% endif %}
+
+    <!--{% with categories=page.categories.all %}
+        {% if categories %}
+            <h3>Posted in:</h3>
+            <ul>
+                {% for category in categories %}
+                    <li style="display: inline">
+                        {% image category.icon fill-32x32 style="vertical-align: middle" %}
+                        {{ category.name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}-->
 
     <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
 
