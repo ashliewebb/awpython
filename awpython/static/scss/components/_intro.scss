@@ -1,5 +1,4 @@
 .intro {
-  @include font-size(19);
   margin: $base-spacing-unit auto 0;
   text-align: center;
   max-width: 305px;
@@ -8,12 +7,22 @@
     max-width: 455px;
   }
 
-  @include media(get-layout(medium)) {
-    @include font-size(22);
+  p {
+    line-height: 1.4;
+    @include font-size(20);
+    margin: 0;
+
+    @include media(get-layout(medium)) {
+        @include font-size(24);
+      }
+
+      @include media(get-layout(large)) {
+        @include font-size(28);
+      }
   }
 
-  p {
-    margin: 0;
+  + h1 {
+    margin-top: $base-spacing-unit * 4.5;
   }
 
   &:after {

@@ -1,52 +1,54 @@
-.nav-primary,
-.nav-footer {
+.nav-primary {
     margin: 0;
-    text-align: center;
-
-    @include media(get-layout(medium)) {
-        display: inline-block;
-        float: right;
-    }
 
     ul {
         transition: $base-transition;
         display: inline-block;
-        line-height: 35px;
-        margin: 0 auto;
+        list-style-type: none;
+        margin: $base-spacing-unit auto;
         padding: 0;
+        width: 100%;
 
         li {
-            display: inline-block;
-            float: left;
-            margin: 0 0.25em;
 
             a {
                 @extend .primary-link;
-                font: 14px $font-primary-nav;
-                letter-spacing: 1px;
-                padding: 5px 8px;
-                text-transform: lowercase;
+
+                display: block;
+                font: 15px $font-primary-nav;
+                line-height: 1.8;
+                color: #444E60;
+                width: 100%;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: $base-spacing-unit;
             }
         }
     }
 }
 
 .nav-primary {
-    margin-top: 35px;
+    display: none;
+    position: absolute;
+    padding: $base-spacing-unit;
+    transform: translateY(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F7F7F7;
+    height: 100vh;
+    z-index: 10;
 
-    li {
-        @include media($breakpoint-medium-below) {
-            width: 45%;
-        }
+    &.active {
+        display: block;
     }
 }
 
-.nav-footer {
-    @include media($breakpoint-medium-below) {
-        clear: both;
-    }
+.menu-icon {
+ @extend %button-reset;
 
-    ul li a {
-        padding: 0;
-    }
+ .icon-svg {
+ fill: $color-base;
+ }
 }

@@ -4,9 +4,19 @@
   text-align: center;
 
   &__quote {
-    @include font-size(24);
     line-height: 1.4;
     margin: 0 0 ($base-spacing-unit / 3) 0;
+
+    @include font-size(20);
+    margin: 0;
+
+    @include media(get-layout(medium)) {
+        @include font-size(24);
+      }
+
+      @include media(get-layout(large)) {
+        @include font-size(28);
+      }
 
     //&:before,
     //&:after {

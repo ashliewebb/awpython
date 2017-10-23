@@ -1,20 +1,19 @@
 .logo {
-    height: 133px;
-    margin: 0 auto;
-    padding: 10px 0 0;
     transition: $base-transition;
-    width: 245px;
 
     @include media(get-layout(medium)) {
-        display: inline-block;
-        float: left;
-        padding-left: 1em;
-        padding-right: 1em;
+        height: 133px;
+        width: 245px;
     }
 
     .svg-icon {
-        height: 120px;
-        width: 220px;
+        height: 76px;
+        width: 140px;
+
+        @include media(get-layout(medium)) {
+            height: 133px;
+            width: 245px;
+        }
     }
 
     a {

@@ -6,7 +6,7 @@
 
     &:hover,
     &:active {
-        color: $color-primary;
+        color: #030812;
     }
 
     &--underline {
@@ -14,7 +14,7 @@
 
         &:hover,
         &:active {
-            border-bottom: 1px dotted $color-primary;
+            border-bottom: 1px dotted #030812;
         }
     }
 }
