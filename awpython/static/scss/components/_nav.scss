@@ -5,20 +5,22 @@
         transition: $base-transition;
         display: inline-block;
         list-style-type: none;
-        margin: $base-spacing-unit auto;
+        margin: $base-spacing-unit 0;
         padding: 0;
-        width: 100%;
+            width: 100%;
+
+        @include media(get-layout(large)) {
+            width: auto;
+        }
 
         li {
 
             a {
                 @extend .primary-link;
 
-                display: block;
                 font: 15px $font-primary-nav;
                 line-height: 1.8;
                 color: #444E60;
-                width: 100%;
             }
 
             &:nth-child(3) {
@@ -29,6 +31,7 @@
 }
 
 .nav-primary {
+    align-items: center;
     display: none;
     position: absolute;
     padding: $base-spacing-unit;
@@ -41,14 +44,45 @@
     z-index: 10;
 
     &.active {
-        display: block;
+        display: flex;
+    }
+
+    .inner {
+        flex-direction: column;
+        max-width: $content-width;
+        position: relative;
+
+        @include media(get-layout(large)) {
+           flex-direction: row;
+           justify-content: space-evenly;
+           padding: $base-spacing-unit * 2;
+           width: 100%;
+        }
     }
 }
 
 .menu-icon {
  @extend %button-reset;
+ padding: 0;
 
  .icon-svg {
+ height: 22px;
+ width: 22px;
  fill: $color-base;
  }
+
+ &.close-icon {
+ position: absolute;
+    right: 0;
+    top: 0;
+
+    .icon-svg {
+    height: 22px;
+ width: 32px;
+    }
+ }
+}
+
+.menu-open {
+overflow: hidden;
 }

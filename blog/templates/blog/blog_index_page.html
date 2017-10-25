@@ -11,13 +11,15 @@
 
     {% for post in blogpages %}
         {% with post=post.specific %}
-            <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
+            <article>
+                 <h1><a href="{% pageurl post %}">{{ post.title }}</a></h1>
 
-            {% with post.main_image as main_image %}
-                {% if main_image %}{% image main_image fill-160x100 %}{% endif %}
-            {% endwith %}
+                {% with post.main_image as main_image %}
+                    {% if main_image %}{% image main_image fill-160x100 %}{% endif %}
+                {% endwith %}
 
-            <p>{{ post.intro }}</p>
+                <p>{{ post.intro }}</p>
+            </article>
         {% endwith %}
     {% endfor %}
 
