@@ -9,4 +9,8 @@
     .inner {
         max-width: $content-width;
     }
+
+    .template-blogpage & {
+        padding-top: 66px;
+    }
 }

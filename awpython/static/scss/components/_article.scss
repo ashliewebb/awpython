@@ -3,4 +3,8 @@
         @include font-size(36);
         text-transform: none;
     }
+
+    &__content {
+        margin-top: $base-spacing-unit;
+    }
 }

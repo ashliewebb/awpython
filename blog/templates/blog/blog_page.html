@@ -6,13 +6,14 @@
 
 {% block content %}
 
-    <p class="breadcrumbs"><a href="{{ page.get_parent.url }}">Blog</a> > {{ page.title }}</p>
+    <p><a href="{{ page.get_parent.url }}">< blog</a></p>
 
-    <article>
+    <article class="article">
         <h1 class="article__heading">{{ page.title }}</h1>
         <h2>{{ page.intro }}</h2>
 
-        {% for block in page.body %}
+        <div class="article__content">
+            {% for block in page.body %}
             {% if block.block_type == 'heading' %}
                 <h2>{{ block.value }}</h2>
             {% else %}
@@ -28,6 +29,7 @@
                 <p>{{ item.caption }}</p>
             </div>
         {% endfor %}
+        </div>
 
         {% if page.tags.all.count %}
             <div class="tags">
@@ -54,7 +56,5 @@
             </ul>
         {% endif %}
     {% endwith %}-->
-
-    <p><a href="{{ page.get_parent.url }}">Return to blog</a></p>
 
 {% endblock %}
