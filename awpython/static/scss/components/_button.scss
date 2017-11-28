@@ -36,7 +36,7 @@ $color-button-active-text: $dark-green;
         display: inline-block;
         float: left;
         @include font-size(18);
-        font-family: $yanone;
+        font-family: $base-font;
         letter-spacing: 1px;
         margin-right: 15px;
         padding: 12px;

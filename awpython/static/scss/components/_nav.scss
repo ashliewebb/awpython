@@ -5,13 +5,8 @@
         transition: $base-transition;
         display: inline-block;
         list-style-type: none;
-        margin: $base-spacing-unit 0;
-        padding: 0;
-            width: 100%;
-
-        @include media(get-layout(large)) {
-            width: auto;
-        }
+        padding: $base-spacing-unit ($base-spacing-unit / 2);
+        width: 100%;
 
         li {
 
@@ -34,12 +29,13 @@
     align-items: center;
     display: none;
     position: absolute;
-    padding: $base-spacing-unit;
+    padding-left: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
     transform: translateY(0);
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F7F7F7;
+    background-color: #F0F0F0;
     height: 100vh;
     z-index: 10;
 
@@ -51,38 +47,62 @@
         flex-direction: column;
         max-width: $content-width;
         position: relative;
+        align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-        @include media(get-layout(large)) {
-           flex-direction: row;
-           justify-content: space-evenly;
-           padding: $base-spacing-unit * 2;
-           width: 100%;
+    &__section {
+        border-top: 1px solid #DED9D9;
+        padding-left: $base-spacing-unit / 2;
+        padding-right: $base-spacing-unit / 2;
+
+        &:first-child {
+            border-top: none;
         }
     }
 }
 
 .menu-icon {
- @extend %button-reset;
- padding: 0;
-
- .icon-svg {
- height: 22px;
- width: 22px;
- fill: $color-base;
- }
-
- &.close-icon {
- position: absolute;
-    right: 0;
-    top: 0;
+    @extend %button-reset;
+    padding: 0;
+    margin-right: $base-spacing-unit;
+    height: 22px;
+    width: 22px;
 
     .icon-svg {
-    height: 22px;
- width: 32px;
+        height: 22px;
+        width: 22px;
+        fill: $color-base;
     }
- }
+
+    &.close-icon {
+        position: absolute;
+        right: $base-spacing-unit;
+        top: 67px;
+        width: 18px;
+
+        .icon-svg {
+            width: 18px;
+        }
+    }
 }
 
 .menu-open {
-overflow: hidden;
+    overflow: hidden;
+}
+
+.nav-contact {
+    @include media(get-layout(medium)) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h3 {
+        margin-bottom: $base-spacing-unit;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
 }

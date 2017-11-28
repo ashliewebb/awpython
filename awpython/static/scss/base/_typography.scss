@@ -52,7 +52,7 @@ h2 {
 }
 
 h3 {
-    font-family: $karla;
+    font-family: $base-font;
     @include font-size(18);
     font-weight: 700;
     margin: 22px 0 8px;

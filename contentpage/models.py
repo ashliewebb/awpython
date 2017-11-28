@@ -11,6 +11,14 @@ from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.wagtailimages.blocks import ImageChooserBlock
 
 
+class HistoricalEvent(blocks.StructBlock):
+    year = blocks.CharBlock()
+    desc = blocks.RichTextBlock()
+
+    class Meta:
+        template = 'blocks/historical-event.html'
+
+
 class ContentPage(Page):
     subtitle = models.CharField(max_length=250, default='')
     intro = RichTextField(blank=True)
@@ -18,7 +26,8 @@ class ContentPage(Page):
         ('heading', blocks.CharBlock(classname='full title')),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
-        ('quote', BlockQuoteBlock())
+        ('quote', BlockQuoteBlock()),
+        ('historical_event', HistoricalEvent())
     ])
 
     content_panels = Page.content_panels + [
