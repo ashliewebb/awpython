@@ -1,9 +1,9 @@
 .sidebar {
-  font-size: 90%;
+    font-size: 90%;
 
-  @include media(get-layout(large)) {
-    padding-top: 137px;
-    padding-right: $base-spacing-unit;
-    text-align: right;
-  }
+    @media #{$breakpoint-large} {
+        padding-top: 137px;
+        padding-right: $base-spacing-unit;
+        text-align: right;
+    }
 }

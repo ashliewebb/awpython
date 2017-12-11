@@ -3,7 +3,7 @@
     width: 100%;
     padding-top: $base-spacing-unit / 2;
 
-    @include media(print) {
+    @media print {
         display: none;
     }
 

@@ -1,57 +1,58 @@
 .block-quote {
-  margin: ($base-spacing-unit * 1.5) 0 0;
-  padding: 0 $base-spacing-unit;
-  text-align: center;
+    margin: ($base-spacing-unit * 1.5) 0 0;
+    padding: 0 $base-spacing-unit;
+    text-align: center;
 
-  &__quote {
-    line-height: 1.4;
-    margin: 0 0 ($base-spacing-unit / 3) 0;
 
-    @include font-size(18);
-    margin: 0;
+    &__quote {
+        line-height: 1.4;
+        //margin: 0 0 ($base-spacing-unit / 3) 0;
 
-    @include media(get-layout(medium)) {
-        @include font-size(22);
-      }
+        @include font-size(18);
+        margin: 0;
 
-      @include media(get-layout(large)) {
-        @include font-size(26);
-      }
+        @media #{$breakpoint-medium} {
+            @include font-size(22);
+        }
 
-    //&:before,
-    //&:after {
-    //  font-family: $griffos;
-    //  font-size: 600%;
-    //  line-height: 0;
-    //  opacity: 0.15;
-    //  position: absolute;
-    //}
+        @media #{$breakpoint-large} {
+            @include font-size(26);
+        }
 
-    //&:before {
-    //  content: open-quote;
-    //  left: -63px;
-    //  top: 79px;
-    //}
+        //&:before,
+        //&:after {
+        //  font-family: $griffos;
+        //  font-size: 600%;
+        //  line-height: 0;
+        //  opacity: 0.15;
+        //  position: absolute;
+        //}
 
-    //&:after {
-    //  content: close-quote;
-    //  bottom: 27px;
-    //  right: -49px;
-    //}
-  }
+        //&:before {
+        //  content: open-quote;
+        //  left: -63px;
+        //  top: 79px;
+        //}
 
-  &__cite {
-    @include font-size(14);
-    display: inline-block;
-    font-style: normal;
-    opacity: 0.65;
-    margin-top: $base-spacing-unit;
-    width: 100%;
-
-    &:before {
-      content: '~';
-      display: inline-block;
-      margin-right: 5px;
+        //&:after {
+        //  content: close-quote;
+        //  bottom: 27px;
+        //  right: -49px;
+        //}
     }
-  }
+
+    &__cite {
+        @include font-size(14);
+        display: inline-block;
+        font-style: normal;
+        opacity: 0.65;
+        margin-top: $base-spacing-unit;
+        width: 100%;
+
+        &:before {
+            content: '~';
+            display: inline-block;
+            margin-right: 5px;
+        }
+    }
 }

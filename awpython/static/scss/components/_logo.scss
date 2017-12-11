@@ -1,7 +1,7 @@
 .logo {
     transition: $base-transition;
 
-    @include media(get-layout(medium)) {
+    @media #{$breakpoint-medium} {
         height: 133px;
         width: 245px;
     }
@@ -10,7 +10,7 @@
         height: 76px;
         width: 140px;
 
-        @include media(get-layout(medium)) {
+        @media #{$breakpoint-medium} {
             height: 133px;
             width: 245px;
         }

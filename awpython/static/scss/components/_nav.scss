@@ -93,7 +93,7 @@
 }
 
 .nav-contact {
-    @include media(get-layout(medium)) {
+    @media #{$breakpoint-medium} {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
