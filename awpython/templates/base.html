@@ -56,21 +56,13 @@
 
     <div class="container">
         <header class="header" content="header">
-          <div class="inner">
-            <div class="logo">
-              <a href="/" title="Ashlie Webb, UX designer and front end developer">
+            <div class="header__logo">
+              <a href="/" title="Ashlie Webb, UX designer and frontend developer">
                 <svg class="svg-icon"><use xlink:href="#logo"></use></svg>
               </a>
             </div>
-            <nav class="nav-primary" role="navigation">
-              <ul>
-                <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
-                <li><a href="/about" title="About">About</a></li>
-                <li><a href="/blog" title="Read blog">Blog</a></li>
-                <li class="last"><a href="/contact" title="Contact">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
+            <svg class="svg-icon svg-icon--menu-control"><use xlink:href="#menu"></use></svg>
+            {% include "blocks/menu.html" %}
         </header>
 
         <main class="main layout-two-columns--9-shift" id="main" role="main">
@@ -85,7 +77,7 @@
             <!--<em><a href="{{ site.baseurl }}sitemap.html">Sitemap</a></em>-->
             <!--<em><a href="{{ site.baseurl }}privacy.html" id="link__footer&#45;&#45;privacy">Privacy</a></em>-->
             <!--<em><a href="{{ site.baseurl }}style-guide/">Style guide</a></em> -->
-            <em><a href="/resume.html">Resum&eacute;</a></em>
+            <em><a href="/resume">Resum&eacute;</a></em>
             <nav class="nav-footer">
               <ul>
                 <li>

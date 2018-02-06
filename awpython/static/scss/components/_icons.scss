@@ -21,9 +21,14 @@
     width: 22px;
     transition: $base-transition;
 
-    &--instagram {
-        fill: $print-black;
+    &--instagram,
+    &--twitter,
+    &--github,
+    &--linkedin {
+        fill: $body-text-color;
+    }
 
+    &--instagram {
         &:hover,
         &:active {
             fill: #3f729b;
@@ -31,8 +36,6 @@
     }
 
     &--twitter {
-        fill: $print-black;
-
         &:hover,
         &:active {
             fill: #55acee;
@@ -40,8 +43,6 @@
     }
 
     &--github {
-        fill: $print-black;
-
         &:hover,
         &:active {
             fill: #333;
@@ -49,8 +50,6 @@
     }
 
     &--linkedin {
-        fill: $print-black;
-
         &:hover,
         &:active {
             fill: #0976b4;

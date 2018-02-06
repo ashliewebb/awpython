@@ -27,64 +27,69 @@ category: base
 
 */
 
-$print-black: #231f20;
-$cream: #f5f5f3;
+//$print-black: #231f20;
+//$cream: #f5f5f3;
+//
+//$dark-grey: #474646;
+//$grey: #8f9094;
+//$rich-pink: #942571;
+//
+//$yellow: #e6e048;
+//$light-green: #b2edd0;
+//$bubblegum: #00c3a9;
+//$blue: #008798;
+//$lime: #c7cf74;
+//$green: #a1ac32;
+//$dark-green: #99a702;
 
-$dark-grey: #474646;
-$grey: #8f9094;
-$rich-pink: #942571;
 
-$yellow: #e6e048;
-$light-green: #b2edd0;
-$bubblegum: #00c3a9;
-$blue: #008798;
-$lime: #c7cf74;
-$green: #a1ac32;
-$dark-green: #99a702;
+$colour-primary-bg: #fff;
+$colour-primary-base: #404348;
+$color-primary: #94C18D;
 
-
-$colour-primary-bg: $cream;
-$colour-primary-base: $print-black;
-$colour-primary-neutral: $dark-grey;
-$colour-primary-highlight: $rich-pink;
-
-$colour-secondary-highlight: $yellow;
-$colour-secondary-highlight2: $bubblegum;
-$colour-secondary-highlight3: $blue;
-
-$colour-secondary-lowlight: $light-green;
-
-$colour-font-body: $dark-grey;
-$colour-font-alt: $cream;
-
+//
+//$colour-primary-neutral: $dark-grey;
+//$colour-primary-highlight: $rich-pink;
+//
+//$colour-secondary-highlight: $yellow;
+//$colour-secondary-highlight2: $bubblegum;
+//$colour-secondary-highlight3: $blue;
+//
+//$colour-secondary-lowlight: $light-green;
+//
+//$colour-font-body: $dark-grey;
+//$colour-font-alt: $cream;
+//
 
 
 /* ==== Must be edited! === */
 
 /* Colours */
+//
+//$color-primary: $colour-highlight;
+//$color-secondary: $rich-pink;
+//
+//$color-neutral: #fff;
+//$body-text-color: #231f20;
+//
+//
+///* Backgrounds */
+//$background-primary: $color-neutral;
+//$background-secondary: $color-secondary;
+//
+//
+///* Links */
+//$link-primary: $color-neutral;
+//$link-active: $color-neutral;
+//
+//
+///* Fonts */
+$body-text-color: $colour-primary-base;
+$body-text-color-active: $color-primary;
 
-$color-primary: $lime;
-$color-secondary: $rich-pink;
-
-$color-neutral: #fff;
-$color-base: #231f20;
-
-
-/* Backgrounds */
-$background-primary: $color-neutral;
-$background-secondary: $color-secondary;
-
-
-/* Links */
-$link-primary: $color-neutral;
-$link-active: $color-neutral;
-
-
-/* Fonts */
-$body-text-color: $color-base;
-
-
-/* Borders */
-$border-primary-color: $color-primary;
-
-$border-primary: 1px solid $color-primary;
+//
+//
+///* Borders */
+//$border-primary-color: $color-primary;
+//
+//$border-primary: 1px solid $color-primary;
