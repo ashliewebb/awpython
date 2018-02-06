@@ -1,7 +1,12 @@
 .idea/
+<<<<<<< HEAD
 awpython/static/node_modules/
 
 venv
 *.pyc
 staticfiles
 .env
+=======
+#awpython/static/css/style.min.css
+awpython/static/node_modules/
+>>>>>>> 2583281fe85950383a06dbdbcfae575a14caa1df

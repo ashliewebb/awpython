@@ -19,7 +19,7 @@ category: base
 h1 {
     color: $color-primary;
     font-family: $griffos;
-    @include font-size(52);
+    @include font-size(44);
     line-height: 1;
     margin: 0;
     text-transform: lowercase;
@@ -28,9 +28,9 @@ h1 {
         margin: 0;
         max-width: 300px;
 
-        @include media(get-layout(large)) {
-            @include font-size(60);
-        }
+//        @include media(get-layout(large)) {
+//            @include font-size(60);
+//        }
 
         br {
             line-height: 1.35;
@@ -43,7 +43,6 @@ h2 {
     display: inline-block;
     font-family: $courier-new;
     @include font-size(17);
-    letter-spacing: 2px;
     margin: $base-spacing-unit 0;
     text-transform: uppercase;
 
@@ -53,7 +52,7 @@ h2 {
 }
 
 h3 {
-    font-family: $karla;
+    font-family: $base-font;
     @include font-size(18);
     font-weight: 700;
     margin: 22px 0 8px;
@@ -62,7 +61,7 @@ h3 {
 p,
 %body-type-primary {
     font-family: $base-font;
-    font-weight: 400;
+    font-weight: 300;
     line-height: $base-line-height;
 }
 

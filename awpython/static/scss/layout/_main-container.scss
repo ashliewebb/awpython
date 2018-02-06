@@ -1,0 +1,11 @@
+.main-container {
+    padding-top: $base-spacing-unit * 2;
+
+    .inner {
+        max-width: $content-width;
+    }
+
+    .template-blogpage & {
+        padding-top: 66px;
+    }
+}

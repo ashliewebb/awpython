@@ -1,13 +1,108 @@
 .nav-primary {
+    margin: 0;
 
+    ul {
+        transition: $base-transition;
+        display: inline-block;
+        list-style-type: none;
+        padding: $base-spacing-unit ($base-spacing-unit / 2);
+        width: 100%;
+
+        li {
+
+            a {
+                @extend .primary-link;
+
+                font: 15px $font-primary-nav;
+                line-height: 1.8;
+                color: #444E60;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: $base-spacing-unit;
+            }
+        }
+    }
 }
 
-.svg-icon--menu-control {
-  width: 18px;
-  height: 18px;
+.nav-primary {
+    align-items: center;
+    display: none;
+    position: absolute;
+    padding-left: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
+    transform: translateY(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 100vh;
+    z-index: 10;
 
-  @include media(get-layout(medium)) {
-    width: 24px;
-    height: 24px;
-  }
+    &.active {
+        display: flex;
+    }
+
+    .inner {
+        flex-direction: column;
+        max-width: $content-width;
+        position: relative;
+        align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__section {
+        border-top: 1px solid #DED9D9;
+        padding-left: $base-spacing-unit / 2;
+        padding-right: $base-spacing-unit / 2;
+
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+.menu-icon {
+    @extend %button-reset;
+    padding: 0;
+    margin-right: $base-spacing-unit;
+    height: 22px;
+    width: 22px;
+
+    .icon-svg {
+        height: 22px;
+        width: 22px;
+        fill: $color-base;
+    }
+
+    &.close-icon {
+        position: absolute;
+        right: $base-spacing-unit;
+        top: 67px;
+        width: 18px;
+
+        .icon-svg {
+            width: 18px;
+        }
+    }
+}
+
+.menu-open {
+    overflow: hidden;
+}
+
+.nav-contact {
+    @media #{$breakpoint-medium} {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h3 {
+        margin-bottom: $base-spacing-unit;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
 }

@@ -19,16 +19,13 @@ gulp.task('sass', function() {
     return gulp.src([
         './scss/style.scss'])
         .pipe($.sass({
-            includePaths: [
-                './node_modules/bourbon/app/assets/stylesheets',
-                './node_modules/bourbon-neat/app/assets/stylesheets',
-                './scss/'
-            ],
+            includePaths: ['./scss/'],
             outputStyle: 'compressed'
         }))
         .pipe($.autoprefixer({
             browsers: ['last 2 versions'],
-            cascade: false
+            cascade: false,
+            grid: false
         }))
         .pipe($.header(banner))
         .pipe($.cssmin())

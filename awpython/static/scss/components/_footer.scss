@@ -1,53 +1,10 @@
 .footer {
     @include clearfix;
-    display: inline-block;
     margin: 120px auto 0;
-    padding: 0 1em;
-    position: relative;
-    width: 100%;
-
-    @include media(print) {
-        display: none;
-    }
+    text-align: center;
 
     em {
-        color: $body-text-color;
-        float: left;
+        color: $color-base;
         font: 14px $font-primary-nav;
-        letter-spacing: 1px;
-        line-height: 3;
-        margin-right: 15px;
-
-        a {
-            @extend .primary-link;
-            font: 14px $font-primary-nav;
-            letter-spacing: 1px;
-            padding: 5px 8px;
-            text-transform: lowercase;
-        }
-    }
-}
-
-.nav-footer {
-    display: inline-block;
-    float: left;
-    margin: 15px 0 15px 1em;
-
-    ul {
-        line-height: 40px;
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        float: left;
-        line-height: 50px;
-    }
-
-    .svg-icon {
-        cursor: pointer;
-        height: 20px;
-        width: 20px;
     }
 }

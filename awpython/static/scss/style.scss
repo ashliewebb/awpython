@@ -1,6 +1,4 @@
 @import
-"bourbon",
-"neat",
 
 "config/grid",
 "config/palette",
@@ -19,19 +17,34 @@
 
 "layout/content",
 "layout/grid",
-"layout/main",
+"layout/main-container",
 "layout/sidebar",
 
+<<<<<<< HEAD
+=======
+"components/article",
+"components/block-image",
+"components/block-paragraph",
+>>>>>>> 2583281fe85950383a06dbdbcfae575a14caa1df
 "components/breadcrumbs",
 "components/button",
+"components/contact-item",
 "components/disclaimer",
 "components/footer",
 "components/header",
+"components/historical-event",
 "components/icons",
 "components/link",
 "components/list",
 "components/nav",
 "components/portfolio-item",
-"components/quote",
 "components/teaser",
-"components/text";
+"components/text",
+
+
+// Redesign 2017
+
+// Aim to remove bourbon and neat
+
+"components/quote",
+"components/intro";

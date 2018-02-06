@@ -25,19 +25,8 @@
         <link rel="canonical" href=""> <!-- base url or page url -->
 
         <!--<link rel="stylesheet" href="{% static 'css/print.min.css' %}" media="print" />-->
-        <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" type="text/css" />
-
-        <!-- Hotjar Tracking Code for http://www.ashliewebb.com -->
-        <script>
-          (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:260870,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-          })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
-        </script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet" />
     </head>
 
     <body itemscope itemtype="http://schema.org/WebPage" class="{% block body_class %}{% endblock %}">
@@ -54,6 +43,7 @@
 
 {% include "inline_svg.html" %}
 
+<<<<<<< HEAD
     <div class="container">
         <header class="header" content="header">
             <div class="header__logo">
@@ -64,15 +54,85 @@
             <svg class="svg-icon svg-icon--menu-control"><use xlink:href="#menu"></use></svg>
             {% include "blocks/menu.html" %}
         </header>
+=======
+      <header class="header" content="header">
+        <div class="inner">
+          <div class="logo">
+            <a href="/" title="Ashlie Webb, UX designer and front end developer">
+              <svg class="svg-icon"><use xlink:href="#logo"></use></svg>
+            </a>
+          </div>
+            <button class="js-menu-open-button menu-icon">
+                <svg class="icon-svg"><use xlink:href="#menu"></use></svg>
+            </button>
+        </div>
+          <nav class="js-menu nav-primary" role="navigation">
+                <button class="js-menu-close-button menu-icon close-icon">
+                    <svg class="icon-svg"><use xlink:href="#close"></use></svg>
+              </button>
+            <div class="inner">
+                <div class="breadcrumbs nav-primary__section">
+                    <span><a href="/" title="Home">Home</a> > </span>{{ self.title }}
+                </div>
 
-        <main class="main layout-two-columns--9-shift" id="main" role="main">
-            <section class="content column-9">
-                {% block content %}{% endblock %}
-            </section>
-        </main>
+                <ul class="nav-primary__section">
+                    <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
+                    <li><a href="/blog" title="Read blog">Blog</a></li>
+                    <li><a href="/about" title="About">About</a></li>
+                    <li><a href="/skills-and-resume" title="Skills &amp; Resum&eacute;">Skills &amp; Resum&eacute;</a></li>
+                    <li><a href="/style-guide" title="Style guide">Style guide</a></li>
+                    <!--<li><a href="/about" title="About">Sitemap</a></li>-->
+                </ul>
 
-        <footer id="footer" class="footer" role="contentinfo">
+                <section class="nav-contact nav-primary__section">
+                    <h3>Get in touch</h3>
+
+                    <div class="contact-item">
+                        <a href="mailto:greetings@ashliewebb.com" title="Email Ashlie Webb" class="contact-item__icon">
+                            <svg class="icon-svg icon-svg--email"><use xlink:href="#email"></use></svg>
+                        </a>
+                        <p><span class="text--smaller">Email</span><br />
+                            <a href="mailto:greetings@ashliewebb.com" title="Email Ashlie Webb">greetings@ashliewebb.com</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile" class="contact-item__icon">
+                            <svg class="icon-svg icon-svg--linkedin"><use xlink:href="#linkedin"></use></svg>
+                        </a>
+                        <p><span class="text--smaller">Linkedin</span><br />
+                            <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile">ashliewebb</a></p>
+                    </div>
+>>>>>>> 2583281fe85950383a06dbdbcfae575a14caa1df
+
+                    <div class="contact-item">
+                        <a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity" class="contact-item__icon">
+                            <svg class="icon-svg icon-svg--twitter"><use xlink:href="#twitter"></use></svg>
+                        </a>
+                        <p><span class="text--smaller">Twitter</span><br />
+                            <a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity">@ashlie012</a></p>
+                    </div>
+
+                    <div class="contact-item">
+                        <a href="https://github.com/ashliewebb" title="View Ashlie's Github profile" class="contact-item__icon">
+                            <svg class="icon-svg icon-svg--github"><use xlink:href="#github"></use></svg>
+                        </a>
+                        <p><span class="text--smaller">Github</span><br />
+                            <a href="https://github.com/ashliewebb" title="View Ashlie's Github profile">ashliewebb</a></p>
+                    </div>
+                </section>
+            </div>
+          </nav>
+      </header>
+
+      <main class="main-container" role="main">
           <div class="inner">
+              {% block content %}{% endblock %}
+          </div>
+      </main>
+
+      <footer id="footer" class="footer" role="contentinfo">
+          <div class="inner">
+<<<<<<< HEAD
             <em>&copy; Ashlie Webb 2016</em>
             <!--<em><a href="{{ site.baseurl }}sitemap.html">Sitemap</a></em>-->
             <!--<em><a href="{{ site.baseurl }}privacy.html" id="link__footer&#45;&#45;privacy">Privacy</a></em>-->
@@ -102,17 +162,22 @@
                 </li>
               </ul>
             </nav>
+=======
+              <p><em>&copy; Ashlie Webb 2017</em>
+>>>>>>> 2583281fe85950383a06dbdbcfae575a14caa1df
           </div>
-        </footer>
-  </div>
+      </footer>
 
-        {% wagtailuserbar %}
+      {% wagtailuserbar %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/awpython.js' %}"></script>
+      {# Global javascript #}
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-        {% endblock %}
+      <script src="{% static 'js/common/menu.js' %}"></script>
+      <script src="{% static 'js/awpython.js' %}"></script>
+
+      {% block extra_js %}
+          {# Override this in templates to add extra javascript #}
+      {% endblock %}
     </body>
 </html>

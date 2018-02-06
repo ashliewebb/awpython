@@ -1,37 +1,25 @@
 .teaser {
-  margin: ($base-spacing-unit / 2) 0 $base-spacing-unit ;
-  &__link {
-    //color: $font-body-color;
+  margin: ($base-spacing-unit / 2) 0 $base-spacing-unit;
+
+  a {
     text-decoration: none;
 
-    &:hover,
-    &:active {
-      > .teaser__title {
+    &:active,
+    &:hover {
+      color: #030812;
+
+      > .teaser__heading {
         text-decoration: underline;
       }
     }
   }
 
-  &__title {
-    margin-top: 0;
-  }
-
-  &__date {
-    //color: $grey;
-    font-family: $yanone;
-    font-size: 90%;
-    margin-bottom: $minor-spacing-unit;
-
-    @include media(get-layout(large)) {
-      margin-bottom: 0;
-      padding-top: 32px;
-      text-align: right;
-    }
-
-    br {
-      @include media($breakpoint-large-below) {
-        display: none;
-      }
-    }
+  &__heading {
+    color: $color-base;
+    text-transform: none;
+    font-family: $base-font;
+    @include font-size(18);
+    font-weight: bold;
+    line-height: 1.2;
   }
 }
