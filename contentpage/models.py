@@ -3,12 +3,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.fields import StreamField, RichTextField
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailcore.blocks import BlockQuoteBlock
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, StreamFieldPanel
-from wagtail.wagtailimages.blocks import ImageChooserBlock
+from wagtail.core.models import Page
+from wagtail.core.fields import StreamField, RichTextField
+from wagtail.core import blocks
+from wagtail.core.blocks import BlockQuoteBlock
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
+from wagtail.images.blocks import ImageChooserBlock
 
 
 class HistoricalEvent(blocks.StructBlock):

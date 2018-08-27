@@ -3,9 +3,9 @@
 from __future__ import unicode_literals
 
 from django.db import migrations
-import wagtail.wagtailcore.blocks
-import wagtail.wagtailcore.fields
-import wagtail.wagtailimages.blocks
+import wagtail.core.blocks
+import wagtail.core.fields
+import wagtail.images.blocks
 
 
 class Migration(migrations.Migration):
@@ -18,6 +18,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='contentpage',
             name='body',
-            field=wagtail.wagtailcore.fields.StreamField([('heading', wagtail.wagtailcore.blocks.CharBlock(classname='full title')), ('paragraph', wagtail.wagtailcore.blocks.RichTextBlock()), ('image', wagtail.wagtailimages.blocks.ImageChooserBlock()), ('quote', wagtail.wagtailcore.blocks.BlockQuoteBlock()), ('historical_event', wagtail.wagtailcore.blocks.StructBlock([(b'year', wagtail.wagtailcore.blocks.CharBlock()), (b'desc', wagtail.wagtailcore.blocks.RichTextBlock())]))]),
+            field=wagtail.core.fields.StreamField([('heading', wagtail.core.blocks.CharBlock(classname='full title')), ('paragraph', wagtail.core.blocks.RichTextBlock()), ('image', wagtail.images.blocks.ImageChooserBlock()), ('quote', wagtail.core.blocks.BlockQuoteBlock()), ('historical_event', wagtail.core.blocks.StructBlock([(b'year', wagtail.core.blocks.CharBlock()), (b'desc', wagtail.core.blocks.RichTextBlock())]))]),
         ),
     ]

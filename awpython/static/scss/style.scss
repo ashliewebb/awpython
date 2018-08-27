@@ -1,47 +1,43 @@
-@import
+@import "config/palette";
+@import "config/vars";
 
-"config/grid",
-"config/palette",
-"config/vars",
+@import "helpers/mixins";
 
-"helpers/mixins",
-"helpers/functions",
+@import "base/fonts";
+@import "base/global";
+@import "base/typography";
+@import "base/normalize";
 
-"base/fonts",
-"base/global",
-"base/typography",
-"base/normalize",
+@import "objects/ui-list";
 
-"objects/ui-list",
+@import "layout/content";
+@import "layout/grid";
+@import "layout/main-container";
+@import "layout/sidebar";
 
-"layout/content",
-"layout/grid",
-"layout/main-container",
-"layout/sidebar",
-
-"components/article",
-"components/block-image",
-"components/block-paragraph",
-"components/breadcrumbs",
-"components/button",
-"components/contact-item",
-"components/disclaimer",
-"components/footer",
-"components/header",
-"components/historical-event",
-"components/icons",
-"components/link",
-"components/list",
-"components/logo",
-"components/nav",
-"components/portfolio-item",
-"components/teaser",
-"components/text",
+@import "components/article";
+@import "components/block-image";
+@import "components/block-paragraph";
+@import "components/breadcrumbs";
+@import "components/button";
+@import "components/contact-item";
+@import "components/disclaimer";
+@import "components/footer";
+@import "components/header";
+@import "components/historical-event";
+@import "components/icons";
+@import "components/link";
+@import "components/list";
+@import "components/logo";
+@import "components/nav";
+@import "components/portfolio-item";
+@import "components/teaser";
+@import "components/text";
 
 
 // Redesign 2017
 
 // Aim to remove bourbon and neat
 
-"components/quote",
-"components/intro";
+@import "components/quote";
+@import "components/intro";

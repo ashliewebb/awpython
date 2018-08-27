@@ -28,7 +28,7 @@
 .nav-primary {
     align-items: center;
     display: none;
-    position: absolute;
+    position: fixed;
     padding-left: $base-spacing-unit;
     padding-right: $base-spacing-unit;
     transform: translateY(0);
@@ -93,7 +93,7 @@
 }
 
 .nav-contact {
-    @media #{$breakpoint-medium} {
+    @media #{$screen-medium} {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

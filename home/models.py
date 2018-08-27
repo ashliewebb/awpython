@@ -2,11 +2,11 @@ from __future__ import absolute_import, unicode_literals
 
 from django.db import models
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.fields import StreamField
-from wagtail.wagtailcore import blocks
-from wagtail.wagtailcore.blocks import BlockQuoteBlock
-from wagtail.wagtailadmin.edit_handlers import StreamFieldPanel
+from wagtail.core.models import Page
+from wagtail.core.fields import StreamField
+from wagtail.core import blocks
+from wagtail.core.blocks import BlockQuoteBlock
+from wagtail.admin.edit_handlers import StreamFieldPanel
 
 
 class QuoteBlock(blocks.StructBlock):
