@@ -2,16 +2,16 @@
   margin: ($base-spacing-unit / 2) 0 $base-spacing-unit;
 
   a {
-     text-decoration: none;
+    text-decoration: none;
 
-      &:active,
-      &:hover {
-        color: #030812;
+    &:active,
+    &:hover {
+      color: #030812;
 
-        > .teaser__heading {
-            text-decoration: underline;
-        }
+      > .teaser__heading {
+        text-decoration: underline;
       }
+    }
   }
 
   &__heading {

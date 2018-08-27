@@ -4,7 +4,6 @@ require('es6-promise').polyfill(); // Needed to get autoprefixer working. See bu
 
 var gulp = require('gulp'),
     path = require('path'),
-    mqRemove = require('gulp-mq-remove'),
     $ = require('gulp-load-plugins')({
         pattern: ['gulp-*']
     });
@@ -45,22 +44,22 @@ gulp.task('sass', function () {
 //});
 
 gulp.task('svg', function () {
-  const svgs = gulp.src('./images/svg/src/*.svg')
-    .pipe($.svgmin(function (file) {
-      var prefix = path.basename(file.relative, path.extname(file.relative));
-      return {
-        plugins: [{
-          cleanupIDs: {
-            prefix: prefix + '-',
-            minify: true
-          }
-        },
-        {
-          removeStyleElement: true
-        }]
-      };
-    }))
-    .pipe($.svgstore({ inlineSvg: true }));
+    var svgs = gulp.src('./images/svg/*.svg')
+        .pipe($.svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                },
+                {
+                    removeStyleElement: true
+                }]
+            }
+        }))
+        .pipe($.svgstore({ inlineSvg: true }));
 
   function fileContents(filePath, file) {
     return file.contents.toString();

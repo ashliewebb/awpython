@@ -1,5 +1,5 @@
 .primary-link {
-    color: $color-base;
+    color: $body-text-color;
     padding-bottom: 2px;
     text-decoration: none;
     transition: $base-transition;
@@ -10,7 +10,7 @@
     }
 
     &--underline {
-        border-bottom: 1px dotted $color-base;
+        border-bottom: 1px dotted $body-text-color;
 
         &:hover,
         &:active {

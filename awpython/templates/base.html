@@ -59,16 +59,16 @@
               </button>
             <div class="inner">
                 <div class="breadcrumbs nav-primary__section">
-                    <span><a href="/" title="Home">Home</a> > </span>{{ self.title }}
+                    <span><a href="/" title="Home">Home</a>{% if self.slug != 'home' %} > </span>{{ self.title }}{% endif %}
                 </div>
 
                 <ul class="nav-primary__section">
                     <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
-                    <li><a href="/blog" title="Read blog">Blog</a></li>
+                    <!--<li><a href="/blog" title="Read blog">Blog</a></li>-->
                     <li><a href="/about" title="About">About</a></li>
                     <li><a href="/skills-and-resume" title="Skills &amp; Resum&eacute;">Skills &amp; Resum&eacute;</a></li>
                     <li><a href="/style-guide" title="Style guide">Style guide</a></li>
-                    <!--<li><a href="/about" title="About">Sitemap</a></li>-->
+                    <!--<li><a href="/sitemap" title="Sitemap">Sitemap</a></li>-->
                 </ul>
 
                 <section class="nav-contact nav-primary__section">
@@ -89,7 +89,6 @@
                         <p><span class="text--smaller">Linkedin</span><br />
                             <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile">ashliewebb</a></p>
                     </div>
-
                     <div class="contact-item">
                         <a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity" class="contact-item__icon">
                             <svg class="icon-svg icon-svg--twitter"><use xlink:href="#twitter"></use></svg>
