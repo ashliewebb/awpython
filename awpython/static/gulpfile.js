@@ -72,7 +72,7 @@ gulp.task('svg', function () {
 });
 
 gulp.task('watch', function () {
-  $.watch([
+  gulp.watch([
     './scss/**/*.scss',
     './scss/**/**/*.scss'
   ], ['sass']);

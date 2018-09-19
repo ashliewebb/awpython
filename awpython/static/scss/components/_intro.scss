@@ -9,7 +9,7 @@
 
     p {
         line-height: 1.4;
-        @include font-size(16);
+        @include font-size(18);
         margin: 0;
 
         @media #{$screen-medium} {
