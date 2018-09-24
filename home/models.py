@@ -14,19 +14,37 @@ class QuoteBlock(blocks.StructBlock):
     quotee = blocks.CharBlock(classname='quotee')
 
     class Meta:
+        icon = 'openquote'
         template = 'blocks/quote.html'
+
+
+class ValueProp(blocks.StructBlock):
+    name = blocks.CharBlock()
+    icon = blocks.CharBlock()
+    link = blocks.CharBlock(required=False)
+
+    class Meta:
+        icon = 'success'
+        template = 'blocks/value-prop.html'
 
 
 class HomePage(Page):
     intro = StreamField([
         ('quote', QuoteBlock())
+    ], blank=True)
+
+    props = StreamField([
+        ('prop', ValueProp())
+    ], blank=True)
+
+    body = StreamField([
+        ('quote', QuoteBlock()),
+        ('heading', blocks.CharBlock(classname='full title', icon='title')),
+        ('paragraph', blocks.RichTextBlock()),
     ])
 
-    # body = StreamField([
-    #     ('quote', QuoteBlock())
-    # ])
-
     content_panels = Page.content_panels + [
-        StreamFieldPanel('intro')
-        # StreamFieldPanel('body')
+        StreamFieldPanel('intro'),
+        StreamFieldPanel('props'),
+        StreamFieldPanel('body')
     ]

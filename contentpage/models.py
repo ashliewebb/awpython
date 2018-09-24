@@ -19,15 +19,26 @@ class HistoricalEvent(blocks.StructBlock):
         template = 'blocks/historical-event.html'
 
 
+class PortfolioItem(blocks.StructBlock):
+    name = blocks.CharBlock()
+    description = blocks.CharBlock()
+    contrib = blocks.CharBlock(required=False)
+    link = blocks.CharBlock(required=False)
+
+    class Meta:
+        template = 'blocks/portfolio-item.html'
+
+
 class ContentPage(Page):
     subtitle = models.CharField(max_length=250, default='')
     intro = RichTextField(blank=True)
     body = StreamField([
-        ('heading', blocks.CharBlock(classname='full title')),
+        ('heading', blocks.CharBlock(classname='full title', icon='title')),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
         ('quote', BlockQuoteBlock()),
-        ('historical_event', HistoricalEvent())
+        ('historical_event', HistoricalEvent()),
+        ('portfolio_item', PortfolioItem())
     ])
 
     content_panels = Page.content_panels + [

@@ -5,7 +5,14 @@
     }
 
     &__desc {
-        padding-left: 35px;
+        margin-bottom: 0;
+    }
+
+    &__contrib {
+        margin-top: 0;
+        font-size: 15px;
+        opacity: 0.65;
+        font-style: italic;
     }
 
     a {
