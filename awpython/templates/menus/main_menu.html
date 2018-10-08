@@ -1,0 +1,9 @@
+{% load menu_tags %}
+
+<ul class="nav-primary__section">
+    {% for item in menu_items %}
+        <li>
+            <a href="{{ item.href }}" title="{{ item.text }}">{{ item.text }}</a>
+        </li>
+    {% endfor %}
+</ul>

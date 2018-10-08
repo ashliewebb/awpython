@@ -1,4 +1,5 @@
 {% load static wagtailuserbar %}
+{% load menu_tags %}
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -64,14 +65,7 @@
                           <span><a href="/" title="Home">Home</a>{% if self.slug != 'home' %} > </span>{{ self.title }}{% endif %}
                       </div>
 
-                      <ul class="nav-primary__section">
-                          <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
-                          <!--<li><a href="/blog" title="Read blog">Blog</a></li>-->
-                          <li><a href="/about" title="About">About</a></li>
-                          <li><a href="/skills-and-resume" title="Skills &amp; Resum&eacute;">Skills &amp; Resum&eacute;</a></li>
-                          <li><a href="/style-guide" title="Style guide">Style guide</a></li>
-                          <!--<li><a href="/sitemap" title="Sitemap">Sitemap</a></li>-->
-                      </ul>
+                      {% main_menu %}
 
                       <section class="nav-contact nav-primary__section">
                           <h3>Get in touch</h3>
