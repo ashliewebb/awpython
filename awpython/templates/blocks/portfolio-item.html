@@ -1,0 +1,7 @@
+<section class="portfolio-item">
+    {% if value.link|length > 0 %}<a href="{{ value.link }}">{% endif %}
+        <h3 class="portfolio-item__year">{{ value.name }}</h3>
+        <p class="portfolio-item__desc">{{ value.description }}</p>
+        <p class="portfolio-item__contrib">{{ value.contrib }}</p>
+    {% if value.link|length > 0 %}</a>{% endif %}
+</section>
