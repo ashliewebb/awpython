@@ -29,6 +29,13 @@ class PortfolioItem(blocks.StructBlock):
         template = 'blocks/portfolio-item.html'
 
 
+class Divider(blocks.StaticBlock):
+    class Meta:
+        icon = 'horizontalrule'
+        label = 'Divider'
+        template = 'blocks/divider.html'
+
+
 class ContentPage(Page):
     subtitle = models.CharField(max_length=250, default='')
     intro = RichTextField(blank=True)
@@ -38,7 +45,8 @@ class ContentPage(Page):
         ('image', ImageChooserBlock()),
         ('quote', BlockQuoteBlock()),
         ('historical_event', HistoricalEvent()),
-        ('portfolio_item', PortfolioItem())
+        ('portfolio_item', PortfolioItem()),
+        ('divider', Divider())
     ])
 
     content_panels = Page.content_panels + [
