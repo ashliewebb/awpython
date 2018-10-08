@@ -1,0 +1,12 @@
+<div class="value-props">
+    {% for prop in page.props %}
+        <section class="value-prop">
+            <a href="{{ prop.link }}">
+                <div class="value-prop__icon">
+                    <svg class="icon-svg icon-svg--{{ value.icon }}"><use xlink:href="#{{ prop.icon }}"></use></svg>
+                </div>
+                <h2 class="value-prop__name">{{ prop.name }}</h2>
+            </a>
+        </section>
+    {% endfor %}
+</div>
