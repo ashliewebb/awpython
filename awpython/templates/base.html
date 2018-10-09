@@ -114,7 +114,10 @@
 
       <footer id="footer" class="footer" role="contentinfo">
           <div class="inner">
-              <p><em>&copy; Ashlie Webb {% now "Y" %}</em>
+              <ul class="footer__menu">
+                  <li class="footer__menu-item">&copy; Ashlie Webb {% now "Y" %}</li>
+                  {% flat_menu 'footer_menu' %}
+              </ul>
           </div>
       </footer>
 
