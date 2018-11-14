@@ -31,14 +31,14 @@
         {% endfor %}
         </div>
 
-        {% if page.tags.all.count %}
+        <!--{% if page.tags.all.count %}
             <div class="tags">
                 <h3>Tags</h3>
                 {% for tag in page.tags.all %}
                     <a href="{% slugurl 'tags' %}?tag={{ tag }}"><button type="button">{{ tag }}</button></a>
                 {% endfor %}
             </div>
-        {% endif %}
+        {% endif %}-->
 
         <p><em>By {{ page.author }}. {{ page.date }}.</em></p>
     </article>
@@ -56,5 +56,13 @@
             </ul>
         {% endif %}
     {% endwith %}-->
+
+    <div class="idf-widget" style="margin-top: 70px;text-align: center; border-top: 2px solid #94C18D; padding-top: 25px">
+        <a href="https://www.interaction-design.org/invite?r=ashlie-webb" target="_blank">
+            <img src="https://public-media.interaction-design.org/images/idf-logo-full.svg" style="height:90px; display:block; margin-left:auto; margin-right:auto; margin-bottom:20px;">
+        </a>
+        <p style="padding-bottom: 20px;">I am a member of the Interaction Design Foundation  of the Interaction Design Foundation, the world’s largest UX Design learning community.</p>
+        <p><a href="https://www.interaction-design.org/invite?r=ashlie-webb" target="_blank">Get 3 months of free membership to learn UX Design here!</a></p>
+    </div>
 
 {% endblock %}
