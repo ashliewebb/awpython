@@ -1,0 +1,47 @@
+.swatch {
+  @extend %body-type-primary;
+  border: 1px solid lightgrey;
+  @include size(136px);
+  display: inline-block;
+  float: left;
+  margin: 0 20px 20px 0;
+  padding: 10px;
+
+  &--pbase {
+    background: $colour-primary-base;
+  }
+
+  &--pbg {
+    background: $colour-primary-bg;
+  }
+
+  &--pneutral {
+    background: $colour-primary-neutral;
+  }
+
+  &--phighlight {
+    background: $colour-primary-highlight;
+  }
+
+  &--shighlight {
+    background: $colour-secondary-highlight;
+  }
+
+  &--shighlight2 {
+    background: $colour-secondary-highlight2;
+  }
+
+  &--shighlight3 {
+    background: $colour-secondary-highlight3;
+  }
+
+  &--slowlight {
+    background: $colour-secondary-lowlight;
+  }
+}
+
+.swatch-colour {
+  &--light {
+    color: $colour-font-alt;
+  }
+}

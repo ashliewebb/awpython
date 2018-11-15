@@ -1,0 +1,12 @@
+.breadcrumbs {
+    //margin: 0 0 33px;
+    //@include font-size(14);
+
+    font: 15px $font-primary-nav;
+    line-height: 1.8;
+    color: #444E60;
+
+    a {
+        @extend .primary-link;
+    }
+}

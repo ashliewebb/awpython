@@ -1,0 +1,11 @@
+.inner {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-left: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
+
+    @media (#{$max-width}) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

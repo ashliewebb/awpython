@@ -1,0 +1,15 @@
+h1[id="typography"] {
+  margin-bottom: 40px;
+  
+  &:before {
+    background: $colour-secondary-lowlight;
+    content: '';
+    display: block;
+    float: left;
+    height: 50px;
+    position: relative;
+    margin-left: -18px;
+    top: 6px;
+    width: 6px;
+  }
+}

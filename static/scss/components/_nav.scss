@@ -1,0 +1,113 @@
+.nav-primary {
+    margin: 0;
+
+    ul {
+        transition: $base-transition;
+        display: inline-block;
+        list-style-type: none;
+        padding: $base-spacing-unit ($base-spacing-unit / 2);
+        width: 100%;
+
+        li {
+
+            a {
+                @extend .primary-link;
+
+                font: 15px $font-primary-nav;
+                line-height: 1.8;
+                color: #444E60;
+            }
+
+            &:nth-child(3) {
+                margin-bottom: $base-spacing-unit;
+            }
+        }
+    }
+}
+
+.nav-primary {
+    display: none;
+    position: fixed;
+    padding-left: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
+    transform: translateY(0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F0F0F0;
+    height: 100vh;
+    z-index: 10;
+
+    > .inner {
+        width: 100%;
+        flex-direction: row-reverse;
+        display: flex;
+        padding: ($base-spacing-unit * 2) 0 0;
+        position: relative;
+
+        @media #{$screen-medium} {
+            padding-top: ($base-spacing-unit * 4);
+        }
+    }
+
+    &.active {
+        display: flex;
+    }
+
+    &__section-wrap {
+        margin: 0 auto;
+    }
+
+    &__section {
+        border-top: 1px solid #DED9D9;
+        padding-left: $base-spacing-unit / 2;
+        padding-right: $base-spacing-unit / 2;
+
+        &:first-child {
+            border-top: none;
+        }
+    }
+}
+
+.menu-icon {
+    @extend %button-reset;
+    padding: 0;
+    margin-right: $base-spacing-unit;
+    height: 22px;
+    width: 22px;
+
+    .icon-svg {
+        height: 22px;
+        width: 22px;
+        fill: $color-base;
+    }
+
+    &.close-icon {
+        align-self: flex-start;
+        top: $base-spacing-unit * 2;
+        width: 18px;
+
+        .icon-svg {
+            width: 18px;
+        }
+    }
+}
+
+.menu-open {
+    overflow: hidden;
+}
+
+.nav-contact {
+    @media #{$screen-medium} {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    h3 {
+        margin-bottom: $base-spacing-unit;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}

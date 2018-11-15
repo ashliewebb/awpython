@@ -1,0 +1,22 @@
+.portfolio-item {
+    &__name {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    &__desc {
+        margin-bottom: 0;
+    }
+
+    &__contrib {
+        margin-top: 0;
+        font-size: 15px;
+        opacity: 0.65;
+        font-style: italic;
+    }
+
+    a {
+        @extend .primary-link;
+        @extend .primary-link--underline;
+    }
+}

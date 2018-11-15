@@ -1,0 +1,40 @@
+// Typography
+
+$courier: 'CourierPrime', 'Courier New', Times, serif;
+$courier-new: 'Courier New', Courier, Times, serif;
+$griffos: 'GriffosFont';
+$quicksand: 'Quicksand', sans-serif;
+$merriweather: 'Merriweather', serif;
+
+$font-primary-nav: $courier;
+
+$base-font: $quicksand;
+
+$base-font-size: 16px;
+$base-line-height: 1.65;
+$base-transition: all 0.5s ease;
+
+$base-spacing-unit: 22px;
+$minor-spacing-unit: 5px;
+
+$asset-path: '/assets/';
+
+
+//** LAYOUT
+
+$base-spacing-unit: 16px;
+$max-width: 1060px;
+$content-width: 680px;
+$min-width: 320px;
+
+$screen-xxl: 'only screen and (min-width: 1260px)';
+$screen-xl: 'only screen and (min-width: 1024px)';
+$screen-large: 'only screen and (min-width: 940px)';
+$screen-medium: 'only screen and (min-width: 770px)';
+$screen-small: 'only screen and (min-width: 600px)';
+$screen-xs: 'only screen and (min-width: 480px)';
+$screen-xxs: 'only screen and (min-width: 320px)';
+
+$screen-small-medium: 'only screen and (min-width: 600px) and (max-width: 769px)';
+$screen-medium-below: 'only screen and (max-width: 770px)';
+$screen-medium-large: 'only screen and (min-width: 770px) and (max-width: 940px)';

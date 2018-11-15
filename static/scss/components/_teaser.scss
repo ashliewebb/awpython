@@ -1,0 +1,25 @@
+.teaser {
+  margin: ($base-spacing-unit / 2) 0 $base-spacing-unit;
+
+  a {
+    text-decoration: none;
+
+    &:active,
+    &:hover {
+      color: #030812;
+
+      > .teaser__heading {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__heading {
+    color: $color-base;
+    text-transform: none;
+    font-family: $base-font;
+    @include font-size(18);
+    font-weight: bold;
+    line-height: 1.2;
+  }
+}

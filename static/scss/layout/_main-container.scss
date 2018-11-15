@@ -1,0 +1,15 @@
+.main-container {
+  padding-top: $base-spacing-unit * 2;
+
+  @media #{$screen-medium} {
+    min-height: 55vh;
+  }
+
+  .inner {
+    max-width: $content-width;
+  }
+
+  .template-blogpage & {
+    padding-top: 66px;
+  }
+}

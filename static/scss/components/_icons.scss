@@ -1,0 +1,58 @@
+.icon {
+    float: left;
+    text-indent: -999em;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        background-size: contain;
+        float: left;
+    }
+
+    &--modifier {
+        &:before {
+            background-image: url('images/icons/icon.svg');
+        }
+    }
+}
+
+.icon-svg {
+    height: 22px;
+    width: 22px;
+    transition: $base-transition;
+
+    &--instagram,
+    &--twitter,
+    &--github,
+    &--linkedin {
+        fill: $body-text-color;
+    }
+
+    &--instagram {
+        &:hover,
+        &:active {
+            fill: #3f729b;
+        }
+    }
+
+    &--twitter {
+        &:hover,
+        &:active {
+            fill: #55acee;
+        }
+    }
+
+    &--github {
+        &:hover,
+        &:active {
+            fill: #333;
+        }
+    }
+
+    &--linkedin {
+        &:hover,
+        &:active {
+            fill: #0976b4;
+        }
+    }
+}

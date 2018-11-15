@@ -1,0 +1,9 @@
+.contact-item {
+    display: flex;
+    padding: 0 ($base-spacing-unit / 2);
+
+    &__icon {
+        padding-right: $base-spacing-unit / 2;
+        margin-top: 3px;
+    }
+}

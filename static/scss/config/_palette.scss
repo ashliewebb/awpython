@@ -1,0 +1,36 @@
+$colour-primary-bg: #fff;
+$colour-primary-base: #404348;
+$color-primary: #94C18D;
+
+$bright-green: #94C18D;
+
+
+/* ==== Must be edited! === */
+
+/* Colours */
+
+$color-primary: $bright-green;
+$color-secondary: pink;
+
+$color-neutral: #fff;
+$color-base: #404348;
+
+
+/* Backgrounds */
+$background-primary: $color-neutral;
+$background-secondary: $color-secondary;
+
+
+/* Links */
+$link-primary: $color-neutral;
+$link-active: $color-neutral;
+
+
+/* Fonts */
+$body-text-color: $color-base;
+
+
+/* Borders */
+$border-primary-color: $color-primary;
+
+$border-primary: 1px solid $color-primary;
