@@ -1,16 +1,16 @@
 .logo {
     transition: $base-transition;
 
-    @media #{$breakpoint-medium} {
+    @media #{$screen-medium} {
         height: 133px;
         width: 245px;
     }
 
     .svg-icon {
-        height: 76px;
-        width: 140px;
+        height: 87px;
+        width: 160px;
 
-        @media #{$breakpoint-medium} {
+        @media #{$screen-medium} {
             height: 133px;
             width: 245px;
         }

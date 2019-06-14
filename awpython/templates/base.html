@@ -1,4 +1,6 @@
 {% load static wagtailuserbar %}
+{# load menu_tags #}
+{% load wagtailcore_tags %}
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -55,59 +57,60 @@
             </button>
         </div>
           <nav class="js-menu nav-primary" role="navigation">
-                <button class="js-menu-close-button menu-icon close-icon">
-                    <svg class="icon-svg"><use xlink:href="#close"></use></svg>
-              </button>
-            <div class="inner">
-                <div class="breadcrumbs nav-primary__section">
-                    <span><a href="/" title="Home">Home</a> > </span>{{ self.title }}
-                </div>
+              <div class="inner">
+                  <button class="js-menu-close-button menu-icon close-icon">
+                      <svg class="icon-svg"><use xlink:href="#close"></use></svg>
+                  </button>
+                  <div class="nav-primary__section-wrap">
+                      <div class="breadcrumbs nav-primary__section">
+                          <span><a href="/" title="Home">Home</a>{% if self.slug != 'home' %} > </span>{{ self.title }}{% endif %}
+                      </div>
 
-                <ul class="nav-primary__section">
-                    <li class="first"><a href="/portfolio" title="Portfolio">Portfolio</a></li>
-                    <li><a href="/blog" title="Read blog">Blog</a></li>
-                    <li><a href="/about" title="About">About</a></li>
-                    <li><a href="/skills-and-resume" title="Skills &amp; Resum&eacute;">Skills &amp; Resum&eacute;</a></li>
-                    <li><a href="/style-guide" title="Style guide">Style guide</a></li>
-                    <!--<li><a href="/about" title="About">Sitemap</a></li>-->
-                </ul>
+                      {# main_menu #}
 
-                <section class="nav-contact nav-primary__section">
-                    <h3>Get in touch</h3>
+                      <section class="nav-contact nav-primary__section">
+                          <h3>Get in touch</h3>
 
-                    <div class="contact-item">
-                        <a href="mailto:greetings@ashliewebb.com" title="Email Ashlie Webb" class="contact-item__icon">
-                            <svg class="icon-svg icon-svg--email"><use xlink:href="#email"></use></svg>
-                        </a>
-                        <p><span class="text--smaller">Email</span><br />
-                            <a href="mailto:greetings@ashliewebb.com" title="Email Ashlie Webb">greetings@ashliewebb.com</a></p>
-                    </div>
+                          <div class="contact-item">
+                              <a href="mailto:greetings@ashliewebb.com" title="Email Ashlie Webb" class="contact-item__icon">
+                                  <svg class="icon-svg icon-svg--envelope"><use xlink:href="#envelope"></use></svg>
+                              </a>
+                              <p><span class="text--smaller">Email</span><br />
+                                  <a href="mailto:greetings@ashliewebb.com" title="Email Ashlie Webb">greetings@ashliewebb.com</a></p>
+                          </div>
 
-                    <div class="contact-item">
-                        <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile" class="contact-item__icon">
-                            <svg class="icon-svg icon-svg--linkedin"><use xlink:href="#linkedin"></use></svg>
-                        </a>
-                        <p><span class="text--smaller">Linkedin</span><br />
-                            <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile">ashliewebb</a></p>
-                    </div>
+                          <div class="contact-item">
+                              <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile" class="contact-item__icon">
+                                  <svg class="icon-svg icon-svg--linkedin"><use xlink:href="#linkedin"></use></svg>
+                              </a>
+                              <p><span class="text--smaller">Linkedin</span><br />
+                                  <a href="https://www.linkedin.com/in/ashliewebb/" title="View Ashlie's Linkedin profile">ashliewebb</a></p>
+                          </div>
+                          <div class="contact-item">
+                              <a href="https://www.instagram.com/ashliewebb" title="View Ashlie's Instagram activity" class="contact-item__icon">
+                                  <svg class="icon-svg icon-svg--instagram"><use xlink:href="#instagram"></use></svg>
+                              </a>
+                              <p><span class="text--smaller">Instagram</span><br />
+                                  <a href="https://www.instagram.com/ashliewebb" title="View Ashlie's Instagram activity">ashliewebb</a></p>
+                          </div>
+                          <!--<div class="contact-item">-->
+                              <!--<a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity" class="contact-item__icon">-->
+                                  <!--<svg class="icon-svg icon-svg&#45;&#45;twitter"><use xlink:href="#twitter"></use></svg>-->
+                              <!--</a>-->
+                              <!--<p><span class="text&#45;&#45;smaller">Twitter</span><br />-->
+                                  <!--<a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity">ashlie012</a></p>-->
+                          <!--</div>-->
 
-                    <div class="contact-item">
-                        <a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity" class="contact-item__icon">
-                            <svg class="icon-svg icon-svg--twitter"><use xlink:href="#twitter"></use></svg>
-                        </a>
-                        <p><span class="text--smaller">Twitter</span><br />
-                            <a href="https://twitter.com/ashlie012" title="View Ashlie's Twitter activity">@ashlie012</a></p>
-                    </div>
-
-                    <div class="contact-item">
-                        <a href="https://github.com/ashliewebb" title="View Ashlie's Github profile" class="contact-item__icon">
-                            <svg class="icon-svg icon-svg--github"><use xlink:href="#github"></use></svg>
-                        </a>
-                        <p><span class="text--smaller">Github</span><br />
-                            <a href="https://github.com/ashliewebb" title="View Ashlie's Github profile">ashliewebb</a></p>
-                    </div>
-                </section>
-            </div>
+                          <div class="contact-item">
+                              <a href="https://github.com/ashliewebb" title="View Ashlie's Github profile" class="contact-item__icon">
+                                  <svg class="icon-svg icon-svg--github"><use xlink:href="#github"></use></svg>
+                              </a>
+                              <p><span class="text--smaller">Github</span><br />
+                                  <a href="https://github.com/ashliewebb" title="View Ashlie's Github profile">ashliewebb</a></p>
+                          </div>
+                      </section>
+                  </div>
+              </div>
           </nav>
       </header>
 
@@ -119,7 +122,10 @@
 
       <footer id="footer" class="footer" role="contentinfo">
           <div class="inner">
-              <p><em>&copy; Ashlie Webb {% now "Y" %}</em>
+              <ul class="footer__menu">
+                  <li class="footer__menu-item">&copy; Ashlie Webb {% now "Y" %}</li>
+                  {# flat_menu 'footer_menu' #}
+              </ul>
           </div>
       </footer>
 

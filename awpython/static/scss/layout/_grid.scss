@@ -4,7 +4,7 @@
     padding-left: $base-spacing-unit;
     padding-right: $base-spacing-unit;
 
-    @media #{$breakpoint-large} {
+    @media (#{$max-width}) {
         padding-left: 0;
         padding-right: 0;
     }

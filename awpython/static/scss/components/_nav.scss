@@ -26,9 +26,8 @@
 }
 
 .nav-primary {
-    align-items: center;
     display: none;
-    position: absolute;
+    position: fixed;
     padding-left: $base-spacing-unit;
     padding-right: $base-spacing-unit;
     transform: translateY(0);
@@ -39,17 +38,24 @@
     height: 100vh;
     z-index: 10;
 
+    > .inner {
+        width: 100%;
+        flex-direction: row-reverse;
+        display: flex;
+        padding: ($base-spacing-unit * 2) 0 0;
+        position: relative;
+
+        @media #{$screen-medium} {
+            padding-top: ($base-spacing-unit * 4);
+        }
+    }
+
     &.active {
         display: flex;
     }
 
-    .inner {
-        flex-direction: column;
-        max-width: $content-width;
-        position: relative;
-        align-items: flex-start;
-        padding-left: 0;
-        padding-right: 0;
+    &__section-wrap {
+        margin: 0 auto;
     }
 
     &__section {
@@ -77,9 +83,8 @@
     }
 
     &.close-icon {
-        position: absolute;
-        right: $base-spacing-unit;
-        top: 67px;
+        align-self: flex-start;
+        top: $base-spacing-unit * 2;
         width: 18px;
 
         .icon-svg {
@@ -93,7 +98,7 @@
 }
 
 .nav-contact {
-    @media #{$breakpoint-medium} {
+    @media #{$screen-medium} {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }

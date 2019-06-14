@@ -1,7 +1,7 @@
 .sidebar {
     font-size: 90%;
 
-    @media #{$breakpoint-large} {
+    @media #{$screen-large} {
         padding-top: 137px;
         padding-right: $base-spacing-unit;
         text-align: right;
